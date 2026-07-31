@@ -2,3 +2,7 @@
 import numpy as np
 arr = np.array([10,20,30,40,50,60])
 print(arr.dtype)
+
+#Another example
+arr1 = np.array([10.2,10.3,9.8,5.6])
+print(arr1.dtype)
