@@ -175,3 +175,104 @@ Common data types:
 - Print `shape`, `size`, `dtype`, and `ndim`.
 - Create a float array and check its `dtype`.
 - Create a 2D array and print its `shape` and `ndim`.
+
+
+# NumPy Day 3 - Array Indexing
+
+## Topics Covered
+
+- What is Indexing?
+- Positive Indexing
+- Negative Indexing
+
+
+---
+
+# 1. What is Indexing?
+
+Indexing is used to access individual elements from a NumPy array.
+
+Indexing starts from **0**.
+
+---
+
+# 2. Positive Indexing
+
+Positive indexing starts from the beginning of the array.
+
+### Example
+
+```python
+import numpy as np
+
+numbers = np.array([10, 20, 30, 40, 50])
+
+print(numbers[0])
+print(numbers[2])
+print(numbers[4])
+```
+
+**Output**
+
+```
+10
+30
+50
+```
+
+---
+
+# 3. Negative Indexing
+
+Negative indexing starts from the end of the array.
+
+### Example
+
+```python
+import numpy as np
+
+numbers = np.array([10, 20, 30, 40, 50])
+
+print(numbers[-1])
+print(numbers[-2])
+print(numbers[-5])
+```
+
+**Output**
+
+```
+50
+40
+10
+```
+
+---
+
+
+
+---
+
+# Summary
+
+| Concept | Description | Example |
+|---------|-------------|---------|
+| `arr[0]` | First element | `10` |
+| `arr[-1]` | Last element | `50` |
+| `arr[row, column]` | Access element in 2D array | `arr[1,2]` |
+| `arr[0]` | First row | `[1 2 3]` |
+| `arr[:,1]` | Second column | `[2 5]` |
+
+---
+
+# Key Points
+
+- Indexing starts from **0**.
+- Negative indexing starts from **-1**.
+
+---
+
+# Practice
+
+1. Create a 1D array of numbers from 1 to 10.
+2. Print the first, third, and last elements.
+3. Print the second-last element using negative indexing.
