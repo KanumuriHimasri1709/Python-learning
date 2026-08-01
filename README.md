@@ -276,3 +276,210 @@ print(numbers[-5])
 1. Create a 1D array of numbers from 1 to 10.
 2. Print the first, third, and last elements.
 3. Print the second-last element using negative indexing.
+
+
+
+
+# NumPy Day 4 - Array Slicing (1D Arrays)
+
+## 📖 Introduction
+
+Array slicing is used to access a range of elements from a NumPy array. Instead of accessing a single element using indexing, slicing allows us to retrieve multiple elements at once.
+
+---
+
+## Topics Covered
+
+- What is Slicing?
+- Slice Syntax
+- Basic Slicing
+- Slicing with Start and End Index
+- Slicing with Step
+- Negative Slicing
+
+---
+
+# 1. What is Slicing?
+
+Slicing is the process of extracting a portion of an array.
+
+### Syntax
+
+```python
+array[start:stop:step]
+```
+
+- **start** → Starting index (inclusive)
+- **stop** → Ending index (exclusive)
+- **step** → Number of positions to skip
+
+---
+
+# 2. Basic Slicing
+
+### Example
+
+```python
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50, 60])
+
+print(arr[1:4])
+```
+
+### Output
+
+```
+[20 30 40]
+```
+
+---
+
+# 3. Slicing from the Beginning
+
+If the start index is omitted, slicing begins from index `0`.
+
+### Example
+
+```python
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50, 60])
+
+print(arr[:4])
+```
+
+### Output
+
+```
+[10 20 30 40]
+```
+
+---
+
+# 4. Slicing to the End
+
+If the stop index is omitted, slicing continues until the last element.
+
+### Example
+
+```python
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50, 60])
+
+print(arr[2:])
+```
+
+### Output
+
+```
+[30 40 50 60]
+```
+
+---
+
+# 5. Slicing with Step
+
+The step value selects elements at regular intervals.
+
+### Example
+
+```python
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50, 60])
+
+print(arr[0:6:2])
+```
+
+### Output
+
+```
+[10 30 50]
+```
+
+---
+
+# 6. Reverse an Array
+
+Using a step of `-1`, the array is reversed.
+
+### Example
+
+```python
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50, 60])
+
+print(arr[::-1])
+```
+
+### Output
+
+```
+[60 50 40 30 20 10]
+```
+
+---
+
+# 7. Negative Slicing
+
+Negative indices start counting from the end of the array.
+
+### Example
+
+```python
+import numpy as np
+
+arr = np.array([10, 20, 30, 40, 50, 60])
+
+print(arr[-5:-2])
+```
+
+### Output
+
+```
+[20 30 40]
+```
+
+---
+
+# Summary
+
+| Slice | Description |
+|--------|-------------|
+| `arr[1:4]` | Elements from index 1 to 3 |
+| `arr[:4]` | From beginning to index 3 |
+| `arr[2:]` | From index 2 to the end |
+| `arr[0:6:2]` | Every second element |
+| `arr[::-1]` | Reverse the array |
+| `arr[-5:-2]` | Slice using negative indexing |
+
+---
+
+# Key Points
+
+- Slicing does not modify the original array.
+- The **start index is included**.
+- The **stop index is excluded**.
+- The step value determines the interval between selected elements.
+- Negative indices count from the end of the array.
+
+---
+
+# Practice Questions
+
+1. Create a NumPy array from 1 to 10.
+2. Print the first five elements.
+3. Print the last four elements.
+4. Print elements from index 2 to 7.
+5. Print every second element.
+6. Reverse the array using slicing.
+7. Print elements using negative slicing.
+
+---
+
+# Conclusion
+
+In this lesson, we learned how to use slicing to extract multiple elements from a 1D NumPy array. We explored different slicing techniques, including basic slicing, step slicing, reverse slicing, and negative slicing. Slicing is an essential concept for efficiently working with NumPy arrays.
