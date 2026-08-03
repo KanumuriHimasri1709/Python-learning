@@ -1,33 +1,47 @@
-# Python Learning
+# Python Learning - NumPy
 
-This repository contains my learning journey in Python and NumPy. It includes practice programs, notes, and examples for each concept.
+This repository contains my NumPy learning journey. Each Python file focuses on a specific concept, starting from array creation and progressing to array operations.
 
 ---
 
-# NumPy (1D Arrays)
+# Repository Structure
 
-## Topics Covered
-
-- Array Creation
-- Array Shape
-- Array Size
-- Data Type (`dtype`)
-- Number of Dimensions (`ndim`)
-- Array Indexing
-- Array Slicing
+```
+Numpys/
+│
+├── day1_arrays.py
+├── day1_size.py
+├── day2_dtype.py
+├── day2_ndim.py
+├── day2_shape.py
+├── day3_indexing.py
+├── day4_slicing.py
+├── day5_np_operations.py
+└── README.md
+```
 
 ---
 
 # Day 1 - Array Creation
 
-NumPy arrays are created using the `np.array()` function.
+## Topics Covered
+
+- Introduction to NumPy
+- Creating 1D Arrays
+- Creating Arrays using `np.array()`
+
+### File
+
+```
+day1_arrays.py
+```
 
 ### Example
 
 ```python
 import numpy as np
 
-numbers = np.array([1, 2, 3, 4, 5])
+numbers = np.array([1,2,3,4,5])
 
 print(numbers)
 ```
@@ -40,35 +54,20 @@ print(numbers)
 
 ---
 
-# Day 2 - Array Properties
+# Day 1 - Array Size
 
-## 1. Shape
+## Topics Covered
 
-The `shape` attribute returns the number of elements in each dimension.
+- `size` Attribute
+- Total Number of Elements
 
-```python
-import numpy as np
-
-numbers = np.array([1,2,3,4,5])
-
-print(numbers.shape)
-```
-
-### Output
+### File
 
 ```
-(5,)
+day1_size.py
 ```
 
-**Explanation**
-
-- `(5,)` means the array has **1 dimension** with **5 elements**.
-
----
-
-## 2. Size
-
-The `size` attribute returns the total number of elements.
+### Example
 
 ```python
 import numpy as np
@@ -86,9 +85,56 @@ print(numbers.size)
 
 ---
 
-## 3. Data Type (`dtype`)
+# Day 2 - Shape
 
-The `dtype` attribute returns the data type of array elements.
+## Topics Covered
+
+- `shape` Attribute
+- Understanding Array Shape
+
+### File
+
+```
+day2_shape.py
+```
+
+### Example
+
+```python
+import numpy as np
+
+numbers = np.array([1,2,3,4,5])
+
+print(numbers.shape)
+```
+
+### Output
+
+```
+(5,)
+```
+
+### Explanation
+
+- `(5,)` represents a 1D array containing 5 elements.
+
+---
+
+# Day 2 - Data Type (`dtype`)
+
+## Topics Covered
+
+- Understanding Data Types
+- Integer Arrays
+- Float Arrays
+
+### File
+
+```
+day2_dtype.py
+```
+
+### Example
 
 ```python
 import numpy as np
@@ -104,18 +150,22 @@ print(numbers.dtype)
 int64
 ```
 
-Common Data Types
-
-- int64
-- float64
-- bool
-- str
-
 ---
 
-## 4. Number of Dimensions (`ndim`)
+# Day 2 - Number of Dimensions (`ndim`)
 
-The `ndim` attribute returns the number of dimensions.
+## Topics Covered
+
+- Number of Dimensions
+- 1D Arrays
+
+### File
+
+```
+day2_ndim.py
+```
+
+### Example
 
 ```python
 import numpy as np
@@ -135,9 +185,18 @@ print(numbers.ndim)
 
 # Day 3 - Array Indexing
 
-Indexing is used to access individual elements from an array.
+## Topics Covered
 
-## Positive Indexing
+- Positive Indexing
+- Negative Indexing
+
+### File
+
+```
+day3_indexing.py
+```
+
+### Example
 
 ```python
 import numpy as np
@@ -145,172 +204,137 @@ import numpy as np
 numbers = np.array([10,20,30,40,50])
 
 print(numbers[0])
-print(numbers[2])
-print(numbers[4])
-```
-
-### Output
-
-```
-10
-30
-50
-```
-
----
-
-## Negative Indexing
-
-```python
-import numpy as np
-
-numbers = np.array([10,20,30,40,50])
-
 print(numbers[-1])
-print(numbers[-2])
-print(numbers[-5])
 ```
 
 ### Output
 
 ```
-50
-40
 10
+50
 ```
 
 ---
 
 # Day 4 - Array Slicing
 
-Array slicing is used to access multiple elements from an array.
+## Topics Covered
 
-## Syntax
+- Basic Slicing
+- Start Index
+- Stop Index
+- Step Value
+- Negative Slicing
+- Reverse Array
 
-```python
-array[start:stop:step]
+### File
+
+```
+day4_slicing.py
 ```
 
-- **start** → Starting index (included)
-- **stop** → Ending index (excluded)
-- **step** → Interval between elements
-
----
-
-## Basic Slicing
+### Example
 
 ```python
 import numpy as np
 
-arr = np.array([10,20,30,40,50,60])
+numbers = np.array([10,20,30,40,50,60])
 
-print(arr[1:4])
+print(numbers[1:5])
 ```
 
 ### Output
 
 ```
-[20 30 40]
+[20 30 40 50]
 ```
 
 ---
 
-## Slicing from Beginning
+# Day 5 - NumPy Operations
+
+## Topics Covered
+
+- Arithmetic Operations
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Modulus
+- Power
+
+### File
+
+```
+day5_np_operations.py
+```
+
+### Example
 
 ```python
-print(arr[:4])
+import numpy as np
+
+a = np.array([1,2,3])
+b = np.array([4,5,6])
+
+print(a + b)
 ```
 
 ### Output
 
 ```
-[10 20 30 40]
-```
-
----
-
-## Slicing to End
-
-```python
-print(arr[2:])
-```
-
-### Output
-
-```
-[30 40 50 60]
-```
-
----
-
-## Slicing with Step
-
-```python
-print(arr[0:6:2])
-```
-
-### Output
-
-```
-[10 30 50]
-```
-
----
-
-## Reverse an Array
-
-```python
-print(arr[::-1])
-```
-
-### Output
-
-```
-[60 50 40 30 20 10]
-```
-
----
-
-## Negative Slicing
-
-```python
-print(arr[-5:-2])
-```
-
-### Output
-
-```
-[20 30 40]
+[5 7 9]
 ```
 
 ---
 
 # Summary
 
-| Topic | Description |
-|-------|-------------|
-| Array Creation | Create arrays using `np.array()` |
-| Shape | Returns array shape |
-| Size | Returns total number of elements |
-| dtype | Returns data type |
-| ndim | Returns number of dimensions |
-| Indexing | Access individual elements |
-| Slicing | Access multiple elements |
+| Day | Topic | File |
+|-----|-------------------------|-----------------------|
+| Day 1 | Array Creation | `day1_arrays.py` |
+| Day 1 | Array Size | `day1_size.py` |
+| Day 2 | Shape | `day2_shape.py` |
+| Day 2 | Data Type (`dtype`) | `day2_dtype.py` |
+| Day 2 | Number of Dimensions (`ndim`) | `day2_ndim.py` |
+| Day 3 | Array Indexing | `day3_indexing.py` |
+| Day 4 | Array Slicing | `day4_slicing.py` |
+| Day 5 | NumPy Operations | `day5_np_operations.py` |
 
 ---
 
-# Practice
+# Skills Learned
 
-- Create a 1D NumPy array.
-- Print `shape`, `size`, `dtype`, and `ndim`.
-- Access elements using positive and negative indexing.
-- Slice the first five elements.
-- Slice the last three elements.
-- Print every second element.
-- Reverse the array using slicing.
+- Creating NumPy Arrays
+- Understanding Array Properties
+- Array Shape
+- Array Size
+- Data Types
+- Number of Dimensions
+- Indexing
+- Slicing
+- Basic NumPy Operations
 
 ---
 
-# Conclusion
+# Future Topics
 
-In these lessons, we learned the fundamentals of **1D NumPy arrays**, including array creation, array properties (`shape`, `size`, `dtype`, and `ndim`), indexing, and slicing. These concepts form the foundation for working with NumPy and are essential before moving on to multidimensional arrays and advanced operations.
+- Reshape
+- Copy vs View
+- Iterating Arrays
+- Joining Arrays
+- Splitting Arrays
+- Searching Arrays
+- Sorting Arrays
+- Filtering Arrays
+- Random Module
+- Linear Algebra
+- Statistical Functions
+
+---
+
+# Author
+
+**Kanumuri Hima Sri**
+
+This repository documents my Python and NumPy learning journey through daily practice and examples.
