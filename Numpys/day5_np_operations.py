@@ -1,4 +1,4 @@
-#operations is used to perform mathematical functions
+#operations used to perform mathematical operations on arrays
 import numpy as np
 arr = np.array([10,20,30,40])
 print(arr+5)
