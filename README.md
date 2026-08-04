@@ -1,261 +1,123 @@
 # Python Learning - NumPy
 
-This repository contains my NumPy learning journey. Each Python file focuses on a specific concept, starting from array creation and progressing to array operations.
+Welcome to my **NumPy Learning Repository**.
+
+This repository contains my daily practice programs, notes, and examples while learning NumPy from basics to advanced concepts.
 
 ---
 
 # Repository Structure
 
-```
-Numpys/
+```text
+Python-learning/
 │
-├── day1_arrays.py
-├── day1_size.py
-├── day2_dtype.py
-├── day2_ndim.py
-├── day2_shape.py
-├── day3_indexing.py
-├── day4_slicing.py
-├── day5_np_operations.py
-└── README.md
+├── Numpys/
+│   ├── day1_arrays.py
+│   ├── day1_size.py
+│   ├── day2_dtype.py
+│   ├── day2_ndim.py
+│   ├── day2_shape.py
+│   ├── day3_indexing.py
+│   ├── day4_slicing.py
+│   ├── day5_np_operations.py
+│   ├── day6_aggregationfunctions.py
+│   └── README.md
 ```
 
 ---
 
-# Day 1 - Array Creation
+# Learning Progress
 
-## Topics Covered
+## ✅ Day 1 - NumPy Basics
+
+### Topics Covered
 
 - Introduction to NumPy
 - Creating 1D Arrays
-- Creating Arrays using `np.array()`
+- Array Size
 
-### File
+### Files
 
-```
-day1_arrays.py
-```
+- `day1_arrays.py`
+- `day1_size.py`
 
-### Example
+### Concepts Learned
 
-```python
-import numpy as np
-
-numbers = np.array([1,2,3,4,5])
-
-print(numbers)
-```
-
-### Output
-
-```
-[1 2 3 4 5]
-```
+- Creating arrays using `np.array()`
+- Understanding the `size` attribute
+- Printing arrays
 
 ---
 
-# Day 1 - Array Size
+## ✅ Day 2 - Array Properties
 
-## Topics Covered
+### Topics Covered
 
-- `size` Attribute
-- Total Number of Elements
+- Array Shape (`shape`)
+- Number of Dimensions (`ndim`)
+- Data Types (`dtype`)
 
-### File
+### Files
 
-```
-day1_size.py
-```
+- `day2_shape.py`
+- `day2_ndim.py`
+- `day2_dtype.py`
 
-### Example
+### Concepts Learned
 
-```python
-import numpy as np
-
-numbers = np.array([1,2,3,4,5])
-
-print(numbers.size)
-```
-
-### Output
-
-```
-5
-```
+- Shape of an array
+- Number of dimensions
+- Data types in NumPy
 
 ---
 
-# Day 2 - Shape
+## ✅ Day 3 - Array Indexing
 
-## Topics Covered
-
-- `shape` Attribute
-- Understanding Array Shape
-
-### File
-
-```
-day2_shape.py
-```
-
-### Example
-
-```python
-import numpy as np
-
-numbers = np.array([1,2,3,4,5])
-
-print(numbers.shape)
-```
-
-### Output
-
-```
-(5,)
-```
-
-### Explanation
-
-- `(5,)` represents a 1D array containing 5 elements.
-
----
-
-# Day 2 - Data Type (`dtype`)
-
-## Topics Covered
-
-- Understanding Data Types
-- Integer Arrays
-- Float Arrays
-
-### File
-
-```
-day2_dtype.py
-```
-
-### Example
-
-```python
-import numpy as np
-
-numbers = np.array([1,2,3,4,5])
-
-print(numbers.dtype)
-```
-
-### Output
-
-```
-int64
-```
-
----
-
-# Day 2 - Number of Dimensions (`ndim`)
-
-## Topics Covered
-
-- Number of Dimensions
-- 1D Arrays
-
-### File
-
-```
-day2_ndim.py
-```
-
-### Example
-
-```python
-import numpy as np
-
-numbers = np.array([1,2,3,4,5])
-
-print(numbers.ndim)
-```
-
-### Output
-
-```
-1
-```
-
----
-
-# Day 3 - Array Indexing
-
-## Topics Covered
+### Topics Covered
 
 - Positive Indexing
 - Negative Indexing
 
 ### File
 
-```
-day3_indexing.py
-```
+- `day3_indexing.py`
 
-### Example
+### Concepts Learned
 
-```python
-import numpy as np
-
-numbers = np.array([10,20,30,40,50])
-
-print(numbers[0])
-print(numbers[-1])
-```
-
-### Output
-
-```
-10
-50
-```
+- Accessing elements using indexes
+- Positive indexing
+- Negative indexing
 
 ---
 
-# Day 4 - Array Slicing
+## ✅ Day 4 - Array Slicing
 
-## Topics Covered
+### Topics Covered
 
 - Basic Slicing
 - Start Index
 - Stop Index
 - Step Value
 - Negative Slicing
-- Reverse Array
+- Reverse Slicing
 
 ### File
 
-```
-day4_slicing.py
-```
+- `day4_slicing.py`
 
-### Example
+### Concepts Learned
 
-```python
-import numpy as np
-
-numbers = np.array([10,20,30,40,50,60])
-
-print(numbers[1:5])
-```
-
-### Output
-
-```
-[20 30 40 50]
-```
+- Extracting elements
+- Step slicing
+- Reverse arrays
+- Negative slicing
 
 ---
 
-# Day 5 - NumPy Operations
+## ✅ Day 5 - NumPy Operations
 
-## Topics Covered
+### Topics Covered
 
-- Arithmetic Operations
 - Addition
 - Subtraction
 - Multiplication
@@ -265,59 +127,55 @@ print(numbers[1:5])
 
 ### File
 
-```
-day5_np_operations.py
-```
+- `day5_np_operations.py`
 
-### Example
+### Concepts Learned
 
-```python
-import numpy as np
-
-a = np.array([1,2,3])
-b = np.array([4,5,6])
-
-print(a + b)
-```
-
-### Output
-
-```
-[5 7 9]
-```
+- Element-wise arithmetic operations
+- Mathematical operations on arrays
 
 ---
 
-# Summary
+## ✅ Day 6 - Aggregation Functions
 
-| Day | Topic | File |
-|-----|-------------------------|-----------------------|
-| Day 1 | Array Creation | `day1_arrays.py` |
-| Day 1 | Array Size | `day1_size.py` |
-| Day 2 | Shape | `day2_shape.py` |
-| Day 2 | Data Type (`dtype`) | `day2_dtype.py` |
-| Day 2 | Number of Dimensions (`ndim`) | `day2_ndim.py` |
-| Day 3 | Array Indexing | `day3_indexing.py` |
-| Day 4 | Array Slicing | `day4_slicing.py` |
-| Day 5 | NumPy Operations | `day5_np_operations.py` |
+### Topics Covered
+
+- Sum
+- Minimum
+- Maximum
+- Mean
+- Median
+- Standard Deviation
+- Variance
+
+### File
+
+- `day6_aggregationfunctions.py`
+
+### Concepts Learned
+
+- Statistical calculations
+- Aggregate functions
+- Data analysis basics
 
 ---
 
 # Skills Learned
 
 - Creating NumPy Arrays
-- Understanding Array Properties
+- Array Properties
 - Array Shape
 - Array Size
 - Data Types
 - Number of Dimensions
 - Indexing
 - Slicing
-- Basic NumPy Operations
+- Arithmetic Operations
+- Aggregation Functions
 
 ---
 
-# Future Topics
+# Upcoming Topics
 
 - Reshape
 - Copy vs View
@@ -329,7 +187,15 @@ print(a + b)
 - Filtering Arrays
 - Random Module
 - Linear Algebra
+- Broadcasting
 - Statistical Functions
+
+---
+
+# Technologies Used
+
+- Python 3
+- NumPy
 
 ---
 
@@ -337,4 +203,10 @@ print(a + b)
 
 **Kanumuri Hima Sri**
 
-This repository documents my Python and NumPy learning journey through daily practice and examples.
+B.Tech – Artificial Intelligence & Data Science
+
+Learning Python and NumPy through daily hands-on practice.
+
+---
+
+⭐ If you find this repository helpful, feel free to star it!
