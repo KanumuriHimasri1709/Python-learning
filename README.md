@@ -2,9 +2,7 @@
 
 Welcome to my **NumPy Learning Repository**!
 
-This repository documents my journey of learning **NumPy** through daily practice. Each Python file focuses on a specific concept with examples and hands-on coding exercises.
-
-The goal of this repository is to build a strong foundation in NumPy before moving on to **Pandas, Matplotlib, Machine Learning, and Data Science**.
+This repository documents my journey of learning **NumPy** through daily practice. Every file contains concepts, examples, and hands-on exercises that help me build a strong foundation in Python for Data Science and Machine Learning.
 
 ---
 
@@ -26,6 +24,7 @@ Python-learning/
 │   ├── day7_2Darrays.py
 │   ├── day7_2Dindexing.py
 │   ├── day7_2Dslicing.py
+│   ├── day8_reshape.py
 │   └── README.md
 ```
 
@@ -33,88 +32,117 @@ Python-learning/
 
 # 📅 Learning Journey
 
-## 📌 Day 1 – Array Creation & Size
+## 📌 Day 1 – Array Creation
+
+### File
+
+- `day1_arrays.py`
 
 ### Topics Covered
 
 - Introduction to NumPy
-- Creating 1D Arrays
-- Array Size
+- Installing NumPy
+- Importing NumPy
+- Creating 1D Arrays using `np.array()`
 
-### Files
-
-- `day1_arrays.py`
-- `day1_size.py`
-
-### Concepts Learned
-
-- Imported the NumPy library.
-- Created one-dimensional arrays using `np.array()`.
-- Displayed arrays.
-- Used the `size` attribute to determine the total number of elements in an array.
-
-### Skills Gained
+### Skills Learned
 
 - Creating NumPy arrays
+- Displaying arrays
 - Understanding array objects
-- Finding array size
 
 ---
 
-## 📌 Day 2 – Array Properties
+## 📌 Day 1 – Array Size
+
+### File
+
+- `day1_size.py`
 
 ### Topics Covered
 
-- Shape (`shape`)
-- Data Type (`dtype`)
-- Number of Dimensions (`ndim`)
+- Array Size
 
-### Files
+### Skills Learned
+
+- Finding the total number of elements using `size`
+
+---
+
+## 📌 Day 2 – Shape of an Array
+
+### File
 
 - `day2_shape.py`
+
+### Topics Covered
+
+- Array Shape (`shape`)
+
+### Skills Learned
+
+- Understanding array structure
+- Difference between 1D and 2D array shapes
+
+---
+
+## 📌 Day 2 – Data Type
+
+### File
+
 - `day2_dtype.py`
+
+### Topics Covered
+
+- Data Types (`dtype`)
+
+### Skills Learned
+
+- Identifying array data types
+- Integer and floating-point arrays
+
+---
+
+## 📌 Day 2 – Number of Dimensions
+
+### File
+
 - `day2_ndim.py`
 
-### Concepts Learned
+### Topics Covered
 
-- Learned the structure of an array using `shape`.
-- Identified array data types using `dtype`.
-- Determined the number of dimensions using `ndim`.
+- Number of Dimensions (`ndim`)
 
-### Skills Gained
+### Skills Learned
 
-- Understanding array properties
-- Working with dimensions
-- Identifying data types
+- Understanding 1D and 2D arrays
+- Determining array dimensions
 
 ---
 
 ## 📌 Day 3 – Array Indexing
+
+### File
+
+- `day3_indexing.py`
 
 ### Topics Covered
 
 - Positive Indexing
 - Negative Indexing
 
-### File
-
-- `day3_indexing.py`
-
-### Concepts Learned
-
-- Accessed elements using positive indexes.
-- Retrieved elements using negative indexes.
-- Understood that indexing starts from `0`.
-
-### Skills Gained
+### Skills Learned
 
 - Accessing array elements
-- Positive indexing
-- Negative indexing
+- Using positive and negative indexes
 
 ---
 
 ## 📌 Day 4 – Array Slicing
+
+### File
+
+- `day4_slicing.py`
 
 ### Topics Covered
 
@@ -125,27 +153,19 @@ Python-learning/
 - Reverse Slicing
 - Negative Slicing
 
-### File
+### Skills Learned
 
-- `day4_slicing.py`
-
-### Concepts Learned
-
-- Extracted multiple elements using slicing.
-- Used start, stop, and step values.
-- Reversed arrays using slicing.
-- Applied negative slicing.
-
-### Skills Gained
-
-- Array slicing
-- Reverse slicing
+- Extracting multiple elements
+- Reverse arrays
 - Step slicing
-- Negative slicing
 
 ---
 
-## 📌 Day 5 – NumPy Operations
+## 📌 Day 5 – NumPy Arithmetic Operations
+
+### File
+
+- `day5_np_operations.py`
 
 ### Topics Covered
 
@@ -156,24 +176,18 @@ Python-learning/
 - Modulus
 - Power
 
-### File
+### Skills Learned
 
-- `day5_np_operations.py`
-
-### Concepts Learned
-
-- Performed arithmetic operations on NumPy arrays.
-- Learned element-wise computation.
-
-### Skills Gained
-
-- Mathematical operations
-- Element-wise calculations
-- Array arithmetic
+- Performing element-wise operations
+- Mathematical computations on arrays
 
 ---
 
 ## 📌 Day 6 – Aggregation Functions
+
+### File
+
+- `day6_aggregationfunctions.py`
 
 ### Topics Covered
 
@@ -185,50 +199,38 @@ Python-learning/
 - Standard Deviation
 - Variance
 
-### File
+### Skills Learned
 
-- `day6_aggregationfunctions.py`
-
-### Concepts Learned
-
-- Calculated statistical values from arrays.
-- Summarized array data using aggregation functions.
-
-### Skills Gained
-
-- Data summarization
-- Statistical analysis
-- Aggregation functions
+- Performing statistical calculations
+- Summarizing numerical data
 
 ---
 
-## 📌 Day 7 – 2D Arrays
-
-### Topics Covered
-
-- Creating 2D Arrays
-- Understanding Rows and Columns
-- Shape of 2D Arrays
+## 📌 Day 7 – Two-Dimensional Arrays
 
 ### File
 
 - `day7_2Darrays.py`
 
-### Concepts Learned
+### Topics Covered
 
-- Created two-dimensional arrays.
-- Understood the row and column structure.
-- Used `shape`, `size`, and `ndim` with 2D arrays.
+- Creating 2D Arrays
+- Rows and Columns
+- Shape of 2D Arrays
+- Dimensions of 2D Arrays
 
-### Skills Gained
+### Skills Learned
 
-- Creating 2D arrays
-- Understanding matrix structure
-- Working with multidimensional arrays
+- Working with matrices
+- Understanding multidimensional arrays
 
 ---
 
-## 📌 Day 7 – 2D Array Indexing
+## 📌 Day 7 – Two-Dimensional Array Indexing
+
+### File
+
+- `day7_2Dindexing.py`
 
 ### Topics Covered
 
@@ -236,57 +238,60 @@ Python-learning/
 - Accessing Rows
 - Accessing Columns
 
-### File
+### Skills Learned
 
-- `day7_2Dindexing.py`
-
-### Concepts Learned
-
-- Accessed elements using row and column indexes.
-- Retrieved complete rows.
-- Retrieved complete columns.
-
-### Skills Gained
-
-- 2D indexing
-- Row selection
-- Column selection
+- Retrieving data from 2D arrays
+- Row and column indexing
 
 ---
 
-## 📌 Day 7 – 2D Array Slicing
-
-### Topics Covered
-
-- Row Slicing
-- Column Slicing
-- Selecting Subarrays
+## 📌 Day 7 – Two-Dimensional Array Slicing
 
 ### File
 
 - `day7_2Dslicing.py`
 
-### Concepts Learned
+### Topics Covered
 
-- Extracted rows from 2D arrays.
-- Extracted columns from 2D arrays.
-- Selected subarrays using slicing.
+- Row Slicing
+- Column Slicing
+- Subarray Selection
 
-### Skills Gained
+### Skills Learned
 
-- 2D slicing
-- Subarray extraction
-- Matrix manipulation
+- Extracting portions of 2D arrays
+- Matrix slicing
 
 ---
 
-# 🎯 Skills Learned
+## 📌 Day 8 – Reshaping Arrays
 
-- Creating NumPy Arrays
-- Array Properties
-- Shape
-- Size
-- Data Type
+### File
+
+- `day8_reshape.py`
+
+### Topics Covered
+
+- `reshape()` Function
+- Converting 1D Arrays to 2D Arrays
+- Converting 2D Arrays to Different Shapes
+- Reshaping Rules
+
+### Skills Learned
+
+- Changing the shape of arrays
+- Understanding reshape compatibility
+- Working with multidimensional data
+
+---
+
+# 🎯 Skills Acquired
+
+- NumPy Installation
+- Array Creation
+- Array Size
+- Array Shape
+- Data Types
 - Number of Dimensions
 - 1D Indexing
 - 1D Slicing
@@ -295,12 +300,14 @@ Python-learning/
 - 2D Arrays
 - 2D Indexing
 - 2D Slicing
+- Array Reshaping
 
 ---
 
 # 🚀 Upcoming Topics
 
-- Reshape
+- Flatten
+- Ravel
 - Copy vs View
 - Iterating Arrays
 - Joining Arrays
@@ -327,7 +334,7 @@ Python-learning/
 
 # 🎯 Learning Goal
 
-The objective of this repository is to build a strong understanding of NumPy through daily coding practice and hands-on examples. This repository serves as my personal learning log and will be expanded as I continue learning advanced NumPy concepts.
+The purpose of this repository is to strengthen my understanding of NumPy through consistent daily practice. It serves as my personal learning log and will continue to grow as I explore more advanced NumPy concepts before moving on to Pandas, Matplotlib, Machine Learning, and Data Science.
 
 ---
 
@@ -335,10 +342,10 @@ The objective of this repository is to build a strong understanding of NumPy thr
 
 **Kanumuri Hima Sri**
 
-B.Tech – Artificial Intelligence & Data Science
+**B.Tech – Artificial Intelligence & Data Science**
 
 Passionate about Python, Artificial Intelligence, Data Science, and Machine Learning.
 
 ---
 
-⭐ If you found this repository useful, consider giving it a **Star**
+⭐ **If you find this repository useful, consider giving it a Star!**
