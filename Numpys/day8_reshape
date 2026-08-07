@@ -1,3 +1,4 @@
+#Reshape of array means changing the shape of an array without changing its data. The reshape() function in NumPy is used to give a new shape to an array without changing its data.
 import numpy as np
 arr = np.array([1,2,3,4,5,6])
 new_arr = arr.reshape(2,3)
