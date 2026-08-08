@@ -1,0 +1,8 @@
+#2D Array creation
+import numpy as np
+marks = np.array([[80,75,90],[60,85,70],[95,88,92]])
+print(marks)
+print(marks.shape)
+print(marks.ndim)
+print(marks.size)
+
