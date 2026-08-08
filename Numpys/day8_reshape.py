@@ -1,0 +1,14 @@
+#Reshape of array means changing the shape of an array without changing its data. The reshape() function in NumPy is used to give a new shape to an array without changing its data.
+import numpy as np
+arr = np.array([1,2,3,4,5,6])
+new_arr = arr.reshape(2,3)
+print(new_arr)
+
+#Another example of reshaping an array is to convert a 1D array into a 2D array. For example, we can reshape a 1D array of 12 elements into a 2D array with 3 rows and 4 columns.
+arr1 = np.array([10,20,30,40,50,60])
+print(arr1.reshape(2,3))
+print(arr1.reshape(3,2))
+
+#Another example for reshape without knowing the number of rows or columns is to use -1 as a placeholder
+arr2 = np.array([10,20,30,40,50,60])
+print(arr2.reshape(2,-1))
