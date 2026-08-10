@@ -2,20 +2,15 @@
 
 Welcome to my **NumPy Learning Repository**!
 
-This repository documents my journey of learning **NumPy** through structured, day-wise practice and hands-on Python programming.
+This repository documents my journey of learning **NumPy** through daily practice and hands-on Python programming.
 
-Each day focuses on a specific NumPy concept, starting from basic array creation and gradually progressing to multidimensional arrays, reshaping, flattening, and transposing arrays.
+I am building my NumPy knowledge step by step, starting with basic array concepts and gradually moving towards multidimensional arrays, array manipulation, and numerical operations.
 
-The main goal of this repository is to develop a strong practical foundation in **NumPy** for future learning in:
-
-- Data Science
-- Data Analysis
-- Machine Learning
-- Artificial Intelligence
+This repository is part of my learning journey towards **Data Science, Machine Learning, and Artificial Intelligence**.
 
 ---
 
-# 📂 Repository Structure
+## 📂 Repository Structure
 
 ```text
 Python-learning/
@@ -45,7 +40,9 @@ Python-learning/
 │   │
 │   ├── day9_flatten.py
 │   │
-│   └── day10_transpose.py
+│   ├── day10_transpose.py
+│   │
+│   └── day11_axis.py
 │
 └── README.md
 ```
@@ -54,7 +51,7 @@ Python-learning/
 
 # 📅 NumPy Learning Journey
 
-## 📌 Day 1 – Array Creation and Size
+## 📌 Day 1 – Array Creation & Size
 
 ### Files
 
@@ -69,11 +66,9 @@ Python-learning/
 - One-dimensional arrays
 - Array size
 
-### Array Creation
+### Key Concepts
 
 NumPy arrays can be created using the `np.array()` function.
-
-### Example
 
 ```python
 import numpy as np
@@ -83,25 +78,16 @@ numbers = np.array([1, 2, 3, 4, 5])
 print(numbers)
 ```
 
-### Array Size
-
-The `size` attribute returns the total number of elements present in an array.
+The `size` attribute returns the total number of elements in an array.
 
 ```python
 print(numbers.size)
 ```
 
-### Key Learning
-
-```text
-np.array()  → Creates a NumPy array
-array.size  → Returns the total number of elements
-```
-
-### Skills Gained
+### Skills Practiced
 
 - Creating NumPy arrays
-- Understanding 1D arrays
+- Working with 1D arrays
 - Finding the total number of elements
 
 ---
@@ -120,11 +106,9 @@ array.size  → Returns the total number of elements
 - Data Type
 - Number of Dimensions
 
----
+### Shape
 
-## 🔹 Array Shape
-
-The `shape` attribute describes the size of an array along each dimension.
+The `shape` attribute describes the structure of an array.
 
 For a 1D array:
 
@@ -132,28 +116,24 @@ For a 1D array:
 (5,)
 ```
 
-This means the array contains **5 elements in one dimension**.
-
 For a 2D array:
 
 ```text
 (2, 3)
 ```
 
-This means:
+This represents:
 
 ```text
 2 rows
 3 columns
 ```
 
----
+### Data Type
 
-## 🔹 Data Type
+The `dtype` attribute returns the data type of the elements.
 
-The `dtype` attribute returns the data type of the elements in an array.
-
-Common examples:
+Examples:
 
 ```text
 int64
@@ -161,44 +141,26 @@ float64
 bool
 ```
 
-Example:
+### Number of Dimensions
 
-```python
-numbers.dtype
-```
-
----
-
-## 🔹 Number of Dimensions
-
-The `ndim` attribute returns the number of dimensions of an array.
-
-Example:
+The `ndim` attribute returns the number of dimensions.
 
 ```python
 numbers.ndim
 ```
 
-Output:
+Example output:
 
 ```text
 1
 ```
 
-### Key Learning
+### Skills Practiced
 
-```text
-shape → Structure of the array
-dtype → Data type of elements
-ndim  → Number of dimensions
-```
-
-### Skills Gained
-
-- Understanding array properties
 - Checking array shape
 - Identifying data types
 - Finding the number of dimensions
+- Understanding array properties
 
 ---
 
@@ -214,51 +176,24 @@ ndim  → Number of dimensions
 - Negative Indexing
 - Accessing individual elements
 
-### Concepts Learned
+### Key Concepts
 
-Indexing is used to access individual elements from a NumPy array.
+NumPy uses **zero-based indexing**.
 
-NumPy uses **zero-based indexing**, which means the first element has index `0`.
+```text
+Index:   0   1   2   3   4
+Value:  10  20  30  40  50
+```
 
-### Example
+Example:
 
 ```python
-import numpy as np
-
-numbers = np.array([10, 20, 30, 40, 50])
-
-print(numbers[0])
-print(numbers[2])
-print(numbers[-1])
+numbers[0]
+numbers[2]
+numbers[-1]
 ```
 
-### Output
-
-```text
-10
-30
-50
-```
-
-### Positive Indexing
-
-Positive indexing starts from the beginning:
-
-```text
-0   1   2   3   4
-10  20  30  40  50
-```
-
-### Negative Indexing
-
-Negative indexing starts from the end:
-
-```text
--5  -4  -3  -2  -1
-10  20  30  40  50
-```
-
-### Skills Gained
+### Skills Practiced
 
 - Accessing individual elements
 - Positive indexing
@@ -274,12 +209,12 @@ Negative indexing starts from the end:
 
 ### Topics Covered
 
-- Basic slicing
-- Start index
-- Stop index
+- Basic Slicing
+- Start Index
+- Stop Index
 - Step
-- Negative slicing
-- Reverse slicing
+- Negative Slicing
+- Reverse Slicing
 
 ### Slicing Syntax
 
@@ -287,29 +222,13 @@ Negative indexing starts from the end:
 array[start:stop:step]
 ```
 
-Where:
-
-- `start` → Starting index
-- `stop` → Ending index
-- `step` → Number of positions to move
-
-### Example
+Example:
 
 ```python
-import numpy as np
-
-numbers = np.array([10, 20, 30, 40, 50, 60])
-
-print(numbers[1:4])
+numbers[1:4]
 ```
 
-### Output
-
-```text
-[20 30 40]
-```
-
-The **start index is included**, while the **stop index is excluded**.
+The **start index is included** and the **stop index is excluded**.
 
 ### Reverse Slicing
 
@@ -317,13 +236,9 @@ The **start index is included**, while the **stop index is excluded**.
 numbers[::-1]
 ```
 
-Output:
+This can be used to reverse a 1D array.
 
-```text
-[60 50 40 30 20 10]
-```
-
-### Skills Gained
+### Skills Practiced
 
 - Extracting multiple elements
 - Selecting ranges
@@ -348,27 +263,7 @@ Output:
 - Modulus
 - Power
 
-### Concepts Learned
-
-NumPy supports arithmetic operations on arrays.
-
-These operations are generally performed **element-wise**.
-
 ### Example
-
-```python
-import numpy as np
-
-a = np.array([10, 20, 30])
-b = np.array([1, 2, 3])
-
-print(a + b)
-print(a - b)
-print(a * b)
-print(a / b)
-```
-
-### Common Operations
 
 ```python
 a + b
@@ -379,11 +274,13 @@ a % b
 a ** 2
 ```
 
-### Skills Gained
+NumPy allows arithmetic operations to be performed efficiently on arrays.
+
+### Skills Practiced
 
 - Array arithmetic
 - Element-wise operations
-- Mathematical computations
+- Mathematical calculations
 
 ---
 
@@ -415,36 +312,22 @@ np.std()
 np.var()
 ```
 
-### Example
+### Key Concepts
 
-```python
-import numpy as np
+Aggregation functions are useful for summarizing and analyzing numerical data.
 
-numbers = np.array([10, 20, 30, 40, 50])
-
-print(np.sum(numbers))
-print(np.min(numbers))
-print(np.max(numbers))
-print(np.mean(numbers))
-```
-
-### Concepts Learned
-
-Aggregation functions are used to summarize and analyze numerical data.
-
-They are especially useful for:
+They are important for:
 
 - Data Analysis
 - Statistics
 - Data Science
 - Machine Learning
 
-### Skills Gained
+### Skills Practiced
 
-- Statistical calculations
+- Numerical calculations
 - Data summarization
-- Numerical analysis
-- Using NumPy aggregation functions
+- Basic statistical analysis
 
 ---
 
@@ -469,7 +352,7 @@ Day 7 focuses on working with **2D NumPy arrays**.
 - Size
 - Dimensions
 
-### Example
+Example:
 
 ```python
 import numpy as np
@@ -483,7 +366,7 @@ print(numbers)
 print(numbers.shape)
 ```
 
-### Output
+Output:
 
 ```text
 [[1 2 3]
@@ -492,22 +375,22 @@ print(numbers.shape)
 (2, 3)
 ```
 
-The shape `(2, 3)` means:
+The shape `(2, 3)` represents:
 
 ```text
 2 rows
 3 columns
 ```
 
-### Skills Gained
+### Skills Practiced
 
 - Creating 2D arrays
 - Understanding rows and columns
-- Working with matrix-like data
+- Working with multidimensional data
 
 ---
 
-# 📌 Day 7 – Two-Dimensional Array Indexing
+## 🔹 7.2 – Two-Dimensional Array Indexing
 
 ### File
 
@@ -518,47 +401,28 @@ The shape `(2, 3)` means:
 - Accessing individual elements
 - Row indexing
 - Column indexing
-- Row and column positions
 
-### Example
+For a 2D array:
 
 ```python
-numbers[0, 1]
+numbers[row, column]
 ```
 
-Here:
-
-```text
-0 → Row index
-1 → Column index
-```
-
-### Example Structure
-
-```text
-       Column
-        0  1  2
-
-Row 0   1  2  3
-Row 1   4  5  6
-```
-
-To access `5`:
+Example:
 
 ```python
 numbers[1, 1]
 ```
 
-### Skills Gained
+### Skills Practiced
 
 - 2D indexing
-- Accessing individual elements
-- Row selection
-- Column selection
+- Accessing elements
+- Row and column selection
 
 ---
 
-# 📌 Day 7 – Two-Dimensional Array Slicing
+## 🔹 7.3 – Two-Dimensional Array Slicing
 
 ### File
 
@@ -572,26 +436,17 @@ numbers[1, 1]
 - Selecting multiple columns
 - Selecting subarrays
 
-### Example
-
-```python
-numbers[0:2, 1:3]
-```
-
-This selects a specific portion of the 2D array.
-
-### General Syntax
+General syntax:
 
 ```python
 array[row_start:row_stop, column_start:column_stop]
 ```
 
-### Skills Gained
+### Skills Practiced
 
 - 2D slicing
-- Selecting subarrays
+- Subarray selection
 - Matrix manipulation
-- Working with multidimensional data
 
 ---
 
@@ -607,13 +462,12 @@ array[row_start:row_stop, column_start:column_stop]
 - Changing array shape
 - 1D to 2D conversion
 - Reshaping multidimensional arrays
-- Reshape compatibility
 
-### Concepts Learned
+### Key Concept
 
-The `reshape()` function changes the structure or shape of an array without changing its elements.
+The `reshape()` function changes the shape of an array while maintaining the same elements.
 
-### Example
+Example:
 
 ```python
 import numpy as np
@@ -625,7 +479,7 @@ new_array = numbers.reshape(2, 3)
 print(new_array)
 ```
 
-### Output
+Output:
 
 ```text
 [[1 2 3]
@@ -640,17 +494,18 @@ For example:
 
 ```text
 6 elements
+
 2 × 3 = 6
 ```
 
-Therefore, reshaping is possible.
+Therefore, the reshape is valid.
 
-### Skills Gained
+### Skills Practiced
 
 - Changing array shape
+- Reshaping arrays
 - Converting 1D arrays to 2D arrays
 - Understanding reshape compatibility
-- Working with multidimensional data
 
 ---
 
@@ -664,13 +519,13 @@ Therefore, reshaping is possible.
 
 - Flattening multidimensional arrays
 - `flatten()` method
-- Converting 2D arrays into 1D arrays
+- Converting 2D arrays to 1D arrays
 
-### Concepts Learned
+### Key Concept
 
-Flattening converts a multidimensional array into a **one-dimensional array**.
+Flattening converts a multidimensional array into a one-dimensional array.
 
-### Example
+Example:
 
 ```python
 import numpy as np
@@ -685,7 +540,7 @@ flat_array = numbers.flatten()
 print(flat_array)
 ```
 
-### Output
+Output:
 
 ```text
 [1 2 3 4 5 6]
@@ -704,15 +559,11 @@ print(flat_array)
 [1 2 3 4 5 6]
 ```
 
-### Key Learning
+### Skills Practiced
 
-The `flatten()` method creates a 1D version of a multidimensional array.
-
-### Skills Gained
-
-- Converting multidimensional arrays to 1D
-- Understanding flattening
-- Preparing array data for further processing
+- Flattening multidimensional arrays
+- Converting 2D arrays into 1D arrays
+- Preparing arrays for further processing
 
 ---
 
@@ -727,13 +578,13 @@ The `flatten()` method creates a 1D version of a multidimensional array.
 - Array Transpose
 - `transpose()` function
 - `.T` attribute
-- Rows and columns transformation
+- Row and column transformation
 
-### Concepts Learned
+### Key Concept
 
-Transpose changes the arrangement of an array by converting **rows into columns and columns into rows**.
+Transpose changes the arrangement of an array by exchanging its rows and columns.
 
-### Example
+Example:
 
 ```python
 import numpy as np
@@ -746,7 +597,7 @@ numbers = np.array([
 print(numbers.T)
 ```
 
-### Output
+Output:
 
 ```text
 [[1 4]
@@ -781,32 +632,38 @@ Shape:
 (3, 2)
 ```
 
-### Using `transpose()`
-
-```python
-numbers.transpose()
-```
-
-### Using `.T`
-
-```python
-numbers.T
-```
-
-### Key Learning
-
-For a 2D array, transpose swaps:
-
-```text
-Rows ↔ Columns
-```
-
-### Skills Gained
+### Skills Practiced
 
 - Transposing arrays
 - Understanding row-column transformation
 - Using `.T`
 - Using `transpose()`
+
+---
+
+# 📌 Day 11 – NumPy Axis
+
+### File
+
+- `day11_axis.py`
+
+### Topics Covered
+
+- NumPy Axis
+- Working with axes in arrays
+- Understanding axis-based operations
+
+### Key Concept
+
+This day focuses on understanding the concept of **axis** while working with NumPy arrays.
+
+Axis becomes especially important when working with **2D and multidimensional arrays** and performing operations across specific dimensions.
+
+### Skills Practiced
+
+- Understanding NumPy axes
+- Working with multidimensional array operations
+- Using axis-based operations
 
 ---
 
@@ -816,8 +673,8 @@ Rows ↔ Columns
 |-----|-------|--------|
 | Day 1 | Array Creation & Size | ✅ Completed |
 | Day 2 | Shape, dtype & ndim | ✅ Completed |
-| Day 3 | 1D Indexing | ✅ Completed |
-| Day 4 | 1D Slicing | ✅ Completed |
+| Day 3 | Array Indexing | ✅ Completed |
+| Day 4 | Array Slicing | ✅ Completed |
 | Day 5 | NumPy Operations | ✅ Completed |
 | Day 6 | Aggregation Functions | ✅ Completed |
 | Day 7 | 2D Arrays | ✅ Completed |
@@ -826,12 +683,13 @@ Rows ↔ Columns
 | Day 8 | Reshape | ✅ Completed |
 | Day 9 | Flatten | ✅ Completed |
 | Day 10 | Transpose | ✅ Completed |
+| Day 11 | Axis | ✅ Completed |
 
 ---
 
 # 🎯 Skills Acquired
 
-Through this learning journey, I have developed practical knowledge of:
+Through this learning journey, I have practiced:
 
 - NumPy Array Creation
 - Array Size
@@ -840,7 +698,7 @@ Through this learning journey, I have developed practical knowledge of:
 - Number of Dimensions
 - 1D Indexing
 - 1D Slicing
-- Arithmetic Operations
+- NumPy Arithmetic Operations
 - Aggregation Functions
 - 2D Array Creation
 - 2D Indexing
@@ -848,10 +706,11 @@ Through this learning journey, I have developed practical knowledge of:
 - Array Reshaping
 - Array Flattening
 - Array Transpose
+- NumPy Axis
 
 ---
 
-# 🧠 NumPy Concepts Covered
+# 🧠 Learning Progression
 
 ```text
 Array Creation
@@ -862,7 +721,7 @@ Indexing
       ↓
 Slicing
       ↓
-Array Operations
+NumPy Operations
       ↓
 Aggregation Functions
       ↓
@@ -877,13 +736,15 @@ Reshape
 Flatten
       ↓
 Transpose
+      ↓
+Axis
 ```
 
 ---
 
-# 🚀 Upcoming Topics
+# 🚀 Upcoming Learning
 
-The following NumPy concepts will be explored in upcoming learning sessions:
+As I continue learning NumPy, I plan to explore more concepts such as:
 
 - `ravel()`
 - Copy vs View
@@ -893,7 +754,7 @@ The following NumPy concepts will be explored in upcoming learning sessions:
 - Searching Arrays
 - Sorting Arrays
 - Filtering Arrays
-- Random Numbers
+- Random Module
 - Broadcasting
 - Statistical Operations
 - Linear Algebra
@@ -901,7 +762,7 @@ The following NumPy concepts will be explored in upcoming learning sessions:
 
 ---
 
-# 🛠️ Technologies Used
+# 🛠️ Tools & Technologies
 
 - **Python 3**
 - **NumPy**
@@ -911,13 +772,13 @@ The following NumPy concepts will be explored in upcoming learning sessions:
 
 ---
 
-# 🎯 Learning Objective
+# 🎓 Learning Objective
 
-The main objective of this repository is to develop a strong practical understanding of **NumPy** through consistent daily coding and hands-on practice.
+The objective of this repository is to build a strong practical foundation in **NumPy through consistent daily practice**.
 
-This repository serves as my personal learning log and will continue to grow as I learn more advanced NumPy concepts.
+Instead of only learning the theory, I am maintaining individual Python files for each concept so that I can practice, experiment, and understand how NumPy works in real Python programs.
 
-The knowledge gained from this repository will provide a strong foundation for learning:
+This NumPy foundation will help me progress towards:
 
 - **Pandas**
 - **Matplotlib**
@@ -928,25 +789,40 @@ The knowledge gained from this repository will provide a strong foundation for l
 
 ---
 
-# 👩‍💻 Author
+# 👩‍💻 About Me
 
 **Kanumuri Hima Sri**
 
-**B.Tech – Artificial Intelligence & Data Science**
+B.Tech – Artificial Intelligence & Data Science
 
-Interested in:
+Currently building my technical skills through continuous practice in:
 
 - Python
+- NumPy
 - Data Science
-- Artificial Intelligence
 - Machine Learning
+- Artificial Intelligence
 
 ---
 
-# ⭐ Repository
+# 📈 My Learning Approach
 
-This repository represents my continuous learning and practice with NumPy.
+```text
+Learn
+  ↓
+Understand
+  ↓
+Practice
+  ↓
+Write Code
+  ↓
+Push to GitHub
+  ↓
+Improve
+```
 
-**Learning → Practicing → Building → Improving**
+This repository is a record of my **consistent learning and coding practice**.
 
-⭐ If you find this repository useful, consider giving it a **Star!**
+---
+
+⭐ **Learning every day. Practicing every concept. Building step by step.**
