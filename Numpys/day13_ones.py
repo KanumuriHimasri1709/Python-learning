@@ -2,3 +2,8 @@
 import numpy as np
 arr = np.ones(5)
 print(arr)
+
+
+#another example of np.ones is to create a 2D array of shape (3, 4) filled with ones.
+arr2d = np.ones((3, 4))
+print(arr2d)
