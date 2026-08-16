@@ -11,3 +11,7 @@ print(arr1)
 #another example in float
 arr2 = np.full((4,),3.14)
 print(arr2)
+
+#another example with float
+arr3 = np.full((2,3),2.5)
+print(arr3)
