@@ -51,7 +51,9 @@ Python-learning/
 │   │
 │   ├── day12_zeros.py
 │   │
-│   └── day13_ones.py
+│   ├── day13_ones.py
+│   │
+│   └── day14_full.py
 │
 └── README.md
 ```
@@ -134,8 +136,6 @@ np.array() → Creates a NumPy array
 * Number of dimensions
 * NumPy array properties
 
----
-
 ## 🔹 Array Shape
 
 The `shape` attribute describes the size of an array along each dimension.
@@ -180,8 +180,6 @@ Output:
 (5,)
 ```
 
----
-
 ## 🔹 Data Type
 
 The `dtype` attribute returns the data type of the elements in an array.
@@ -199,8 +197,6 @@ int64
 float64
 bool
 ```
-
----
 
 ## 🔹 Number of Dimensions
 
@@ -222,8 +218,8 @@ Output:
 
 ```text
 shape → Structure of the array
-dtype  → Data type of elements
-ndim   → Number of dimensions
+dtype → Data type of elements
+ndim  → Number of dimensions
 ```
 
 ### Skills Practiced
@@ -526,8 +522,6 @@ Day 7 focuses on working with **2D NumPy arrays**, including creation, indexing,
 * `day7_2Dindexing.py`
 * `day7_2Dslicing.py`
 
----
-
 ## 🔹 7.1 – Creating 2D Arrays
 
 ### Topics Covered
@@ -569,15 +563,7 @@ The shape `(2, 3)` represents:
 3 columns
 ```
 
----
-
 ## 🔹 7.2 – Two-Dimensional Array Indexing
-
-### Topics Covered
-
-* Accessing individual elements
-* Row indexing
-* Column indexing
 
 For a 2D array:
 
@@ -610,17 +596,7 @@ Output:
 3
 ```
 
----
-
 ## 🔹 7.3 – Two-Dimensional Array Slicing
-
-### Topics Covered
-
-* Row slicing
-* Column slicing
-* Selecting multiple rows
-* Selecting multiple columns
-* Selecting subarrays
 
 General syntax:
 
@@ -895,7 +871,7 @@ numbers.transpose()
 
 An **axis** represents a direction or dimension along which an operation is performed.
 
-Consider the following 2D array:
+Consider:
 
 ```text
 [[1 2 3]
@@ -1130,6 +1106,164 @@ np.ones()  → Creates an array filled with 1
 
 ---
 
+# 📌 Day 14 – Creating Arrays with Full
+
+### File
+
+* `day14_full.py`
+
+### Topics Covered
+
+* Creating arrays with a specific value
+* `np.full()`
+* Creating 1D arrays
+* Creating 2D arrays
+* Specifying array shape
+* Filling arrays with custom values
+
+### Key Concept
+
+NumPy provides `np.full()` to create an array of a specified shape where **every element contains the same value**.
+
+### Syntax
+
+```python
+np.full(shape, fill_value)
+```
+
+Where:
+
+```text
+shape       → Defines the size of the array
+fill_value  → Value used to fill the array
+```
+
+### 1D Array
+
+```python
+import numpy as np
+
+numbers = np.full(5, 10)
+
+print(numbers)
+```
+
+Output:
+
+```text
+[10 10 10 10 10]
+```
+
+Here:
+
+```text
+5  → Number of elements
+10 → Value used to fill the array
+```
+
+### 2D Array
+
+```python
+numbers = np.full((2, 3), 7)
+
+print(numbers)
+```
+
+Output:
+
+```text
+[[7 7 7]
+ [7 7 7]]
+```
+
+Here:
+
+```text
+2 → Rows
+3 → Columns
+7 → Fill value
+```
+
+### Comparing Array Creation Functions
+
+```text
+np.zeros() → Fills array with 0
+
+np.ones()  → Fills array with 1
+
+np.full()  → Fills array with a custom value
+```
+
+Example:
+
+```python
+np.zeros((2, 3))
+```
+
+```text
+[[0. 0. 0.]
+ [0. 0. 0.]]
+```
+
+```python
+np.ones((2, 3))
+```
+
+```text
+[[1. 1. 1.]
+ [1. 1. 1.]]
+```
+
+```python
+np.full((2, 3), 5)
+```
+
+```text
+[[5 5 5]
+ [5 5 5]]
+```
+
+### Real-World Example
+
+Suppose we want to create an array representing the initial stock quantity of 100 for five products:
+
+```python
+stock = np.full(5, 100)
+
+print(stock)
+```
+
+Output:
+
+```text
+[100 100 100 100 100]
+```
+
+### Key Learning
+
+```text
+np.full()
+    ↓
+Creates an array
+    ↓
+with a specified shape
+    ↓
+and fills every element
+    ↓
+with a custom value
+```
+
+### Skills Practiced
+
+* Creating arrays with custom values
+* Using `np.full()`
+* Creating 1D arrays
+* Creating 2D arrays
+* Specifying array shapes
+* Understanding NumPy array creation utilities
+
+---
+
 # 📊 Learning Progress
 
 | Day    | Topic                 | Status      |
@@ -1149,6 +1283,7 @@ np.ones()  → Creates an array filled with 1
 | Day 11 | Axis                  | ✅ Completed |
 | Day 12 | Zeros                 | ✅ Completed |
 | Day 13 | Ones                  | ✅ Completed |
+| Day 14 | Full                  | ✅ Completed |
 
 ---
 
@@ -1178,6 +1313,8 @@ Through this learning journey, I have practiced:
 * NumPy Axis
 * Creating Arrays with Zeros
 * Creating Arrays with Ones
+* Creating Arrays with Custom Values
+* Using `np.full()`
 
 ---
 
@@ -1215,6 +1352,8 @@ Axis
 Zeros
       ↓
 Ones
+      ↓
+Full
 ```
 
 ---
@@ -1226,7 +1365,6 @@ As I continue learning NumPy, I plan to explore additional concepts such as:
 * `arange()`
 * `linspace()`
 * `eye()`
-* `full()`
 * `ravel()`
 * Copy vs View
 * Array Iteration
@@ -1319,5 +1457,3 @@ This repository represents my **continuous learning, coding practice, and techni
 **Learning → Practicing → Building → Improving**
 
 ⭐ If you find this repository useful, consider giving it a **Star!**
-
----
