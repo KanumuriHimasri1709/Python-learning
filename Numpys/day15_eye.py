@@ -2,3 +2,8 @@
 import numpy as np
 arr = np.eye(3)
 print(arr)
+
+
+#Another example
+arr1 = np.eye(4, 5)
+print(arr1)
