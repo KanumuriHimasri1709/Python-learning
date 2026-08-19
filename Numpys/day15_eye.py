@@ -7,3 +7,7 @@ print(arr)
 #Another example
 arr1 = np.eye(4, 5)
 print(arr1)
+
+#Another example with dtype specified
+arr2 = np.eye(3, 4, dtype=int)
+print(arr2)
