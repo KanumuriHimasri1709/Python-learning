@@ -2,21 +2,30 @@
 
 Welcome to my **NumPy Learning Repository**! 🚀
 
-This repository documents my **day-wise learning, coding practice, and hands-on experiments with NumPy**, one of the most important Python libraries for numerical computing and data manipulation.
+This repository documents my **day-wise learning, coding practice, and hands-on experiments with NumPy**, one of the most important Python libraries for numerical computing, data analysis, and machine learning.
 
-I am learning NumPy step by step, starting from basic array creation and gradually progressing towards:
+I am learning NumPy step by step through practical coding and maintaining separate Python files for each topic.
 
-* Array properties
-* Indexing and slicing
-* Mathematical operations
-* Aggregation functions
-* 2D arrays
+---
+
+# 📚 What I Am Learning
+
+My NumPy learning journey covers:
+
+* Array Creation
+* Array Properties
+* Indexing
+* Slicing
+* Mathematical Operations
+* Aggregation Functions
+* 2D Arrays
 * Reshaping
 * Flattening
 * Transposing
 * Axes
-* Array creation utilities
-* Identity matrices
+* Array Creation Utilities
+* Identity Matrices
+* Numerical Sequences
 * And more
 
 This repository is part of my learning journey towards:
@@ -43,11 +52,8 @@ Python-learning/
 │   ├── day2_shape.py
 │   │
 │   ├── day3_indexing.py
-│   │
 │   ├── day4_slicing.py
-│   │
 │   ├── day5_np_operations.py
-│   │
 │   ├── day6_aggregationfunctions.py
 │   │
 │   ├── day7_2Darrays.py
@@ -55,20 +61,14 @@ Python-learning/
 │   ├── day7_2Dslicing.py
 │   │
 │   ├── day8_reshape.py
-│   │
 │   ├── day9_flatten.py
-│   │
 │   ├── day10_transpose.py
-│   │
 │   ├── day11_axis.py
-│   │
 │   ├── day12_zeros.py
-│   │
 │   ├── day13_ones.py
-│   │
 │   ├── day14_full.py
-│   │
-│   └── day15_eye.py
+│   ├── day15_eye.py
+│   └── day16_arange.py
 │
 └── README.md
 ```
@@ -79,12 +79,12 @@ Python-learning/
 
 ## 📌 Day 1 – Array Creation & Size
 
-### Files
+### 📁 Files
 
 * `day1_arrays.py`
 * `day1_size.py`
 
-### Topics Covered
+### 📖 Topics Covered
 
 * Introduction to NumPy
 * Importing NumPy
@@ -94,7 +94,7 @@ Python-learning/
 * `np.array()`
 * `.size`
 
-### Creating an Array
+### 🔹 Creating an Array
 
 ```python
 import numpy as np
@@ -104,7 +104,7 @@ numbers = np.array([10, 20, 30, 40, 50])
 print(numbers)
 ```
 
-### Finding Array Size
+### 🔹 Finding Array Size
 
 The `.size` attribute returns the total number of elements in an array.
 
@@ -118,14 +118,14 @@ Output:
 5
 ```
 
-### Key Learning
+### 🧠 Key Learning
 
 ```text
 np.array() → Creates a NumPy array
 .size      → Returns the total number of elements
 ```
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Creating NumPy arrays
 * Working with 1D arrays
@@ -136,13 +136,13 @@ np.array() → Creates a NumPy array
 
 # 📌 Day 2 – Array Properties
 
-### Files
+### 📁 Files
 
 * `day2_dtype.py`
 * `day2_ndim.py`
 * `day2_shape.py`
 
-### Topics Covered
+### 📖 Topics Covered
 
 * Array shape
 * Data type
@@ -172,9 +172,11 @@ This represents:
 3 columns
 ```
 
-Example:
+### Example
 
 ```python
+import numpy as np
+
 numbers = np.array([10, 20, 30, 40, 50])
 
 print(numbers.shape)
@@ -216,7 +218,7 @@ Output:
 1
 ```
 
-### Key Learning
+### 🧠 Key Learning
 
 ```text
 shape → Structure of the array
@@ -224,7 +226,7 @@ dtype → Data type of elements
 ndim  → Number of dimensions
 ```
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Checking array shape
 * Identifying data types
@@ -235,18 +237,18 @@ ndim  → Number of dimensions
 
 # 📌 Day 3 – Array Indexing
 
-### File
+### 📁 File
 
 * `day3_indexing.py`
 
-### Topics Covered
+### 📖 Topics Covered
 
 * Positive indexing
 * Negative indexing
 * Accessing individual elements
 * Zero-based indexing
 
-### Key Concept
+### 🔹 Key Concept
 
 NumPy uses **zero-based indexing**.
 
@@ -255,7 +257,7 @@ Index:  0   1   2   3   4
 Value: 10  20  30  40  50
 ```
 
-Example:
+### Example
 
 ```python
 import numpy as np
@@ -267,7 +269,7 @@ print(numbers[2])
 print(numbers[-1])
 ```
 
-### Positive Indexing
+### 🔹 Positive Indexing
 
 ```text
 0 → First element
@@ -275,14 +277,14 @@ print(numbers[-1])
 2 → Third element
 ```
 
-### Negative Indexing
+### 🔹 Negative Indexing
 
 ```text
 Index:  -5  -4  -3  -2  -1
 Value:  10  20  30  40  50
 ```
 
-### Key Learning
+### 🧠 Key Learning
 
 ```text
 numbers[0]  → First element
@@ -290,7 +292,7 @@ numbers[2]  → Third element
 numbers[-1] → Last element
 ```
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Accessing individual elements
 * Positive indexing
@@ -301,11 +303,11 @@ numbers[-1] → Last element
 
 # 📌 Day 4 – Array Slicing
 
-### File
+### 📁 File
 
 * `day4_slicing.py`
 
-### Topics Covered
+### 📖 Topics Covered
 
 * Basic slicing
 * Start index
@@ -314,7 +316,7 @@ numbers[-1] → Last element
 * Negative slicing
 * Reverse slicing
 
-### Slicing Syntax
+### 🔹 Slicing Syntax
 
 ```python
 array[start:stop:step]
@@ -330,7 +332,7 @@ step  → Number of positions to move
 
 The **start index is included**, while the **stop index is excluded**.
 
-Example:
+### Example
 
 ```python
 numbers = np.array([10, 20, 30, 40, 50])
@@ -344,13 +346,13 @@ Output:
 [20 30 40]
 ```
 
-### Step Slicing
+### 🔹 Step Slicing
 
 ```python
 print(numbers[0:5:2])
 ```
 
-### Reverse Slicing
+### 🔹 Reverse Slicing
 
 ```python
 print(numbers[::-1])
@@ -362,7 +364,7 @@ Output:
 [50 40 30 20 10]
 ```
 
-### Key Learning
+### 🧠 Key Learning
 
 ```text
 Start → Included
@@ -370,7 +372,7 @@ Stop  → Excluded
 Step  → Movement
 ```
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Extracting multiple elements
 * Selecting ranges
@@ -382,11 +384,11 @@ Step  → Movement
 
 # 📌 Day 5 – NumPy Operations
 
-### File
+### 📁 File
 
 * `day5_np_operations.py`
 
-### Topics Covered
+### 📖 Topics Covered
 
 * Addition
 * Subtraction
@@ -424,7 +426,7 @@ Example:
 [12 24 35]
 ```
 
-### Key Learning
+### 🧠 Key Learning
 
 ```text
 +  → Addition
@@ -435,7 +437,7 @@ Example:
 ** → Power
 ```
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Array arithmetic
 * Element-wise operations
@@ -446,11 +448,11 @@ Example:
 
 # 📌 Day 6 – Aggregation Functions
 
-### File
+### 📁 File
 
 * `day6_aggregationfunctions.py`
 
-### Topics Covered
+### 📖 Topics Covered
 
 * Sum
 * Minimum
@@ -460,7 +462,7 @@ Example:
 * Standard deviation
 * Variance
 
-### Important Functions
+### 🔹 Important Functions
 
 ```python
 np.sum()
@@ -488,7 +490,7 @@ print(np.std(numbers))
 print(np.var(numbers))
 ```
 
-### Key Concept
+### 🧠 Key Concept
 
 Aggregation functions are used to **summarize and analyze numerical data**.
 
@@ -499,7 +501,7 @@ They are commonly used in:
 * Data Science
 * Machine Learning
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Numerical calculations
 * Data summarization
@@ -510,7 +512,7 @@ They are commonly used in:
 
 # 📌 Day 7 – Two-Dimensional Arrays
 
-### Files
+### 📁 Files
 
 * `day7_2Darrays.py`
 * `day7_2Dindexing.py`
@@ -522,7 +524,7 @@ Day 7 focuses on working with **2D NumPy arrays**, including creation, indexing,
 
 ## 🔹 7.1 – Creating 2D Arrays
 
-### Topics Covered
+### 📖 Topics Covered
 
 * Creating 2D arrays
 * Rows
@@ -531,7 +533,7 @@ Day 7 focuses on working with **2D NumPy arrays**, including creation, indexing,
 * Size
 * Dimensions
 
-Example:
+### Example
 
 ```python
 import numpy as np
@@ -608,7 +610,7 @@ numbers[0:2, 1:3]
 
 This selects a portion of the 2D array.
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Creating 2D arrays
 * Understanding rows and columns
@@ -622,23 +624,23 @@ This selects a portion of the 2D array.
 
 # 📌 Day 8 – Array Reshaping
 
-### File
+### 📁 File
 
 * `day8_reshape.py`
 
-### Topics Covered
+### 📖 Topics Covered
 
-* `reshape()` function
+* `reshape()`
 * Changing array shape
 * 1D to 2D conversion
 * Reshaping multidimensional arrays
 * Reshape compatibility
 
-### Key Concept
+### 🔹 Key Concept
 
 The `reshape()` function changes the structure or shape of an array while keeping the same elements.
 
-Example:
+### Example
 
 ```python
 import numpy as np
@@ -657,7 +659,7 @@ Output:
  [4 5 6]]
 ```
 
-### Important Rule
+### 🧠 Important Rule
 
 The total number of elements must remain the same.
 
@@ -683,7 +685,7 @@ But:
 
 is invalid because the number of elements changes.
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Changing array shape
 * Reshaping arrays
@@ -694,21 +696,21 @@ is invalid because the number of elements changes.
 
 # 📌 Day 9 – Array Flattening
 
-### File
+### 📁 File
 
 * `day9_flatten.py`
 
-### Topics Covered
+### 📖 Topics Covered
 
 * Flattening multidimensional arrays
-* `flatten()` method
+* `flatten()`
 * Converting 2D arrays to 1D arrays
 
-### Key Concept
+### 🔹 Key Concept
 
 Flattening converts a multidimensional array into a **one-dimensional array**.
 
-Example:
+### Example
 
 ```python
 import numpy as np
@@ -729,20 +731,7 @@ Output:
 [1 2 3 4 5 6]
 ```
 
-### Before Flattening
-
-```text
-[[1 2 3]
- [4 5 6]]
-```
-
-### After Flattening
-
-```text
-[1 2 3 4 5 6]
-```
-
-### Key Learning
+### 🧠 Key Learning
 
 ```text
 2D Array
@@ -752,7 +741,7 @@ flatten()
 1D Array
 ```
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Flattening multidimensional arrays
 * Converting 2D arrays into 1D arrays
@@ -762,22 +751,22 @@ flatten()
 
 # 📌 Day 10 – Array Transpose
 
-### File
+### 📁 File
 
 * `day10_transpose.py`
 
-### Topics Covered
+### 📖 Topics Covered
 
 * Array transpose
-* `transpose()` function
+* `transpose()`
 * `.T` attribute
 * Row and column transformation
 
-### Key Concept
+### 🔹 Key Concept
 
 Transpose exchanges the rows and columns of an array.
 
-Example:
+### Example
 
 ```python
 import numpy as np
@@ -798,34 +787,26 @@ Output:
  [3 6]]
 ```
 
-### Before Transpose
+### 🔹 Before Transpose
 
 ```text
 1 2 3
 4 5 6
+
+Shape → (2, 3)
 ```
 
-Shape:
-
-```text
-(2, 3)
-```
-
-### After Transpose
+### 🔹 After Transpose
 
 ```text
 1 4
 2 5
 3 6
+
+Shape → (3, 2)
 ```
 
-Shape:
-
-```text
-(3, 2)
-```
-
-### Common Methods
+### 🔹 Common Methods
 
 ```python
 numbers.T
@@ -837,7 +818,7 @@ and
 numbers.transpose()
 ```
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Transposing arrays
 * Understanding row-column transformation
@@ -848,11 +829,11 @@ numbers.transpose()
 
 # 📌 Day 11 – NumPy Axis
 
-### File
+### 📁 File
 
 * `day11_axis.py`
 
-### Topics Covered
+### 📖 Topics Covered
 
 * Understanding NumPy axes
 * `axis=0`
@@ -860,7 +841,7 @@ numbers.transpose()
 * Axis-based operations
 * Applying operations along dimensions
 
-### Key Concept
+### 🔹 Key Concept
 
 An **axis** represents a direction or dimension along which an operation is performed.
 
@@ -916,14 +897,14 @@ Output:
 4 → 5 → 6 = 15
 ```
 
-### Easy Way to Remember
+### 🧠 Easy Way to Remember
 
 ```text
 axis=0 → Down   → Column-wise result
 axis=1 → Across → Row-wise result
 ```
 
-### Why Axis Is Important
+### 🔥 Why Axis Is Important
 
 Axis-based operations are commonly used in:
 
@@ -933,7 +914,7 @@ Axis-based operations are commonly used in:
 * Pandas
 * Numerical Computing
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Understanding NumPy axes
 * Working with dimensions
@@ -944,11 +925,11 @@ Axis-based operations are commonly used in:
 
 # 📌 Day 12 – Creating Arrays with Zeros
 
-### File
+### 📁 File
 
 * `day12_zeros.py`
 
-### Topics Covered
+### 📖 Topics Covered
 
 * Creating arrays filled with zeros
 * `np.zeros()`
@@ -956,11 +937,11 @@ Axis-based operations are commonly used in:
 * Creating 1D zero arrays
 * Creating 2D zero arrays
 
-### Key Concept
+### 🔹 Key Concept
 
 `np.zeros()` creates an array where all elements are initialized to `0`.
 
-### 1D Zero Array
+### 🔹 1D Zero Array
 
 ```python
 import numpy as np
@@ -976,7 +957,7 @@ Output:
 [0. 0. 0. 0. 0.]
 ```
 
-### 2D Zero Array
+### 🔹 2D Zero Array
 
 ```python
 numbers = np.zeros((2, 3))
@@ -991,7 +972,7 @@ Output:
  [0. 0. 0.]]
 ```
 
-### Understanding Shape
+### 🧠 Understanding Shape
 
 ```text
 np.zeros((2, 3))
@@ -1000,7 +981,7 @@ np.zeros((2, 3))
 3 → Columns
 ```
 
-### Key Learning
+### 🧠 Key Learning
 
 ```text
 np.zeros(5)
@@ -1010,7 +991,7 @@ np.zeros((2, 3))
 → Creates a 2D array with 2 rows and 3 columns
 ```
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Creating predefined arrays
 * Using `np.zeros()`
@@ -1022,11 +1003,11 @@ np.zeros((2, 3))
 
 # 📌 Day 13 – Creating Arrays with Ones
 
-### File
+### 📁 File
 
 * `day13_ones.py`
 
-### Topics Covered
+### 📖 Topics Covered
 
 * Creating arrays filled with ones
 * `np.ones()`
@@ -1034,11 +1015,11 @@ np.zeros((2, 3))
 * Creating 1D ones arrays
 * Creating 2D ones arrays
 
-### Key Concept
+### 🔹 Key Concept
 
 `np.ones()` creates an array where all elements are initialized to `1`.
 
-### 1D Ones Array
+### 🔹 1D Ones Array
 
 ```python
 import numpy as np
@@ -1054,7 +1035,7 @@ Output:
 [1. 1. 1. 1. 1.]
 ```
 
-### 2D Ones Array
+### 🔹 2D Ones Array
 
 ```python
 numbers = np.ones((2, 3))
@@ -1069,14 +1050,14 @@ Output:
  [1. 1. 1.]]
 ```
 
-### Zeros vs Ones
+### 🧠 Zeros vs Ones
 
 ```text
 np.zeros() → Array filled with 0
 np.ones()  → Array filled with 1
 ```
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Creating predefined arrays
 * Using `np.ones()`
@@ -1088,11 +1069,11 @@ np.ones()  → Array filled with 1
 
 # 📌 Day 14 – Creating Arrays with Full
 
-### File
+### 📁 File
 
 * `day14_full.py`
 
-### Topics Covered
+### 📖 Topics Covered
 
 * Creating arrays with a specific value
 * `np.full()`
@@ -1101,11 +1082,11 @@ np.ones()  → Array filled with 1
 * Specifying array shape
 * Filling arrays with custom values
 
-### Key Concept
+### 🔹 Key Concept
 
 `np.full()` creates an array of a specified shape where **every element contains the same value**.
 
-### Syntax
+### 🔹 Syntax
 
 ```python
 np.full(shape, fill_value)
@@ -1114,11 +1095,11 @@ np.full(shape, fill_value)
 Where:
 
 ```text
-shape       → Defines the size of the array
-fill_value  → Value used to fill the array
+shape      → Defines the size of the array
+fill_value → Value used to fill the array
 ```
 
-### 1D Array
+### 🔹 1D Array
 
 ```python
 import numpy as np
@@ -1134,7 +1115,7 @@ Output:
 [10 10 10 10 10]
 ```
 
-### 2D Array
+### 🔹 2D Array
 
 ```python
 numbers = np.full((2, 3), 7)
@@ -1149,7 +1130,7 @@ Output:
  [7 7 7]]
 ```
 
-### Comparing Array Creation Functions
+### 🔹 Comparing Array Creation Functions
 
 ```text
 np.zeros() → Fills array with 0
@@ -1157,7 +1138,7 @@ np.ones()  → Fills array with 1
 np.full()  → Fills array with a custom value
 ```
 
-### Real-World Example
+### 🔹 Real-World Example
 
 Suppose we want to create an array representing an initial stock quantity of `100` for five products:
 
@@ -1173,7 +1154,7 @@ Output:
 [100 100 100 100 100]
 ```
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Creating arrays with custom values
 * Using `np.full()`
@@ -1186,11 +1167,11 @@ Output:
 
 # 📌 Day 15 – Identity Matrix with `np.eye()`
 
-### File
+### 📁 File
 
 * `day15_eye.py`
 
-### Topics Covered
+### 📖 Topics Covered
 
 * Creating identity matrices
 * `np.eye()`
@@ -1198,7 +1179,7 @@ Output:
 * Diagonal elements
 * Understanding identity matrices
 
-### Key Concept
+### 🔹 Key Concept
 
 `np.eye()` creates a **2D identity matrix**.
 
@@ -1207,7 +1188,7 @@ An identity matrix contains:
 * `1` on the main diagonal
 * `0` everywhere else
 
-### Example
+### 🔹 Example
 
 ```python
 import numpy as np
@@ -1225,7 +1206,7 @@ Output:
  [0. 0. 1.]]
 ```
 
-### Understanding the Matrix
+### 🔹 Understanding the Matrix
 
 ```text
 1 0 0
@@ -1233,17 +1214,11 @@ Output:
 0 0 1
 ```
 
-The main diagonal contains `1`s:
-
-```text
-1
-  1
-    1
-```
+The main diagonal contains `1`s.
 
 All other positions contain `0`.
 
-### Creating Different Identity Matrices
+### 🔹 Creating Different Identity Matrices
 
 ```python
 np.eye(2)
@@ -1269,7 +1244,7 @@ Output:
  [0. 0. 0. 1.]]
 ```
 
-### Why Identity Matrices Are Important
+### 🔥 Why Identity Matrices Are Important
 
 Identity matrices are commonly used in:
 
@@ -1279,7 +1254,7 @@ Identity matrices are commonly used in:
 * Mathematical Computations
 * Numerical Computing
 
-### Key Learning
+### 🧠 Key Learning
 
 ```text
 np.eye(n)
@@ -1291,13 +1266,292 @@ Creates an n × n matrix
 0s everywhere else
 ```
 
-### Skills Practiced
+### ✅ Skills Practiced
 
 * Creating identity matrices
 * Using `np.eye()`
 * Understanding diagonal elements
 * Working with square matrices
 * Understanding matrix fundamentals
+
+---
+
+# 📌 Day 16 – NumPy `arange()`
+
+### 📁 File
+
+* `day16_arange.py`
+
+### 📖 Topics Covered
+
+* `np.arange()`
+* Creating sequences of numbers
+* Start value
+* Stop value
+* Step value
+* Integer sequences
+* Even-number sequences
+* Odd-number sequences
+* Descending sequences
+* Difference between `range()` and `np.arange()`
+
+---
+
+## 🔹 What is `np.arange()`?
+
+`np.arange()` is used to create a NumPy array containing a sequence of numbers within a specified range.
+
+### 🔹 Syntax
+
+```python
+np.arange(start, stop, step)
+```
+
+Where:
+
+```text
+start → Starting value
+stop  → Ending value (excluded)
+step  → Difference between consecutive values
+```
+
+---
+
+## 🔹 Basic Example
+
+```python
+import numpy as np
+
+numbers = np.arange(1, 6)
+
+print(numbers)
+```
+
+Output:
+
+```text
+[1 2 3 4 5]
+```
+
+Here:
+
+```text
+start = 1
+stop  = 6
+```
+
+The stop value `6` is **not included**.
+
+---
+
+## 🔹 Using Start and Stop
+
+```python
+numbers = np.arange(5, 11)
+
+print(numbers)
+```
+
+Output:
+
+```text
+[ 5  6  7  8  9 10]
+```
+
+---
+
+## 🔹 Using Step
+
+The `step` parameter controls the difference between consecutive numbers.
+
+```python
+numbers = np.arange(1, 11, 2)
+
+print(numbers)
+```
+
+Output:
+
+```text
+[1 3 5 7 9]
+```
+
+Here:
+
+```text
+start = 1
+stop  = 11
+step  = 2
+```
+
+---
+
+## 🔹 Using Negative Step
+
+`np.arange()` can also generate numbers in descending order.
+
+```python
+numbers = np.arange(10, 0, -2)
+
+print(numbers)
+```
+
+Output:
+
+```text
+[10  8  6  4  2]
+```
+
+---
+
+## 🔹 Creating Even Numbers
+
+```python
+even_numbers = np.arange(2, 11, 2)
+
+print(even_numbers)
+```
+
+Output:
+
+```text
+[ 2  4  6  8 10]
+```
+
+---
+
+## 🔹 Creating Odd Numbers
+
+```python
+odd_numbers = np.arange(1, 10, 2)
+
+print(odd_numbers)
+```
+
+Output:
+
+```text
+[1 3 5 7 9]
+```
+
+---
+
+## 🔹 `np.arange()` vs Python `range()`
+
+### Python `range()`
+
+```python
+numbers = range(1, 6)
+
+print(numbers)
+```
+
+`range()` creates a Python range object.
+
+### NumPy `arange()`
+
+```python
+numbers = np.arange(1, 6)
+
+print(numbers)
+```
+
+Output:
+
+```text
+[1 2 3 4 5]
+```
+
+`np.arange()` directly creates a **NumPy array**.
+
+### 🧠 Easy Difference
+
+```text
+range()
+   ↓
+Python range object
+
+np.arange()
+   ↓
+NumPy array
+```
+
+---
+
+## 🔹 Important Rule
+
+The **stop value is excluded**.
+
+For example:
+
+```python
+np.arange(1, 6)
+```
+
+produces:
+
+```text
+[1 2 3 4 5]
+```
+
+It does not include `6`.
+
+---
+
+## 🔹 Real-World Example
+
+Suppose we want to create product IDs from `100` to `109`:
+
+```python
+product_ids = np.arange(100, 110)
+
+print(product_ids)
+```
+
+Output:
+
+```text
+[100 101 102 103 104 105 106 107 108 109]
+```
+
+This can be useful when creating numerical sequences for data analysis and machine learning.
+
+---
+
+## 🧠 Key Learning
+
+```text
+np.arange(start, stop, step)
+
+start → Included
+stop  → Excluded
+step  → Difference between values
+```
+
+### 🔥 Easy Way to Remember
+
+```text
+np.arange()
+     ↓
+Creates numbers
+     ↓
+Within a range
+     ↓
+With a specified step
+     ↓
+Returns a NumPy array
+```
+
+### ✅ Skills Practiced
+
+* Creating numerical sequences
+* Using `np.arange()`
+* Understanding start, stop and step
+* Creating even-number sequences
+* Creating odd-number sequences
+* Creating descending sequences
+* Understanding `range()` vs `np.arange()`
+* Working with NumPy arrays
 
 ---
 
@@ -1322,6 +1576,7 @@ Creates an n × n matrix
 | Day 13 | Ones                  | ✅ Completed |
 | Day 14 | Full                  | ✅ Completed |
 | Day 15 | Eye / Identity Matrix | ✅ Completed |
+| Day 16 | `arange()`            | ✅ Completed |
 
 ---
 
@@ -1355,6 +1610,9 @@ Through this learning journey, I have practiced:
 * Using `np.full()`
 * Creating Identity Matrices
 * Using `np.eye()`
+* Creating Numerical Sequences
+* Using `np.arange()`
+* Understanding `range()` vs `np.arange()`
 * Basic Matrix Concepts
 
 ---
@@ -1397,39 +1655,19 @@ Ones
 Full
       ↓
 Eye / Identity Matrix
+      ↓
+arange()
 ```
-
----
-
-# 🚀 Upcoming Learning
-
-As I continue learning NumPy, I plan to explore:
-
-* `arange()`
-* `linspace()`
-* `ravel()`
-* Copy vs View
-* Array Iteration
-* Joining Arrays
-* Splitting Arrays
-* Searching Arrays
-* Sorting Arrays
-* Filtering Arrays
-* Random Numbers
-* Broadcasting
-* Statistical Operations
-* Linear Algebra
-* Matrix Operations
 
 ---
 
 # 🛠️ Tools & Technologies
 
-* **Python 3**
-* **NumPy**
-* **Visual Studio Code**
-* **Git**
-* **GitHub**
+* 🐍 **Python 3**
+* 🔢 **NumPy**
+* 💻 **Visual Studio Code**
+* 🔧 **Git**
+* 🐙 **GitHub**
 
 ---
 
@@ -1447,12 +1685,21 @@ Instead of only studying theoretical concepts, I maintain individual Python file
 
 This NumPy foundation will help me progress towards:
 
-* **Pandas**
-* **Matplotlib**
-* **Scikit-learn**
-* **Machine Learning**
-* **Data Science**
-* **Artificial Intelligence**
+```text
+NumPy
+  ↓
+Pandas
+  ↓
+Matplotlib
+  ↓
+Scikit-learn
+  ↓
+Machine Learning
+  ↓
+Data Science
+  ↓
+Artificial Intelligence
+```
 
 ---
 
@@ -1502,6 +1749,31 @@ If you find this repository useful, consider giving it a ⭐ **Star!**
 
 ---
 
-## 🚀 Next Step
+# 🚀 Next Step
 
-After completing `day15_eye.py`, my next NumPy practice will continue with **`arange()`, `linspace()`, `ravel()`, Copy vs View, and Broadcasting**.
+After completing `day16_arange.py`, my next NumPy practice will continue with:
+
+```text
+Day 17 → linspace()
+Day 18 → ravel()
+Day 19 → Copy vs View
+Day 20 → Array Iteration
+Day 21 → Joining Arrays
+Day 22 → Splitting Arrays
+Day 23 → Searching Arrays
+Day 24 → Sorting Arrays
+Day 25 → Filtering Arrays
+Day 26 → Random Numbers
+Day 27 → Broadcasting
+Day 28 → Statistical Operations
+Day 29 → Linear Algebra
+Day 30 → Matrix Operations
+```
+
+---
+
+## 🌱 Learning Journey
+
+> **Small steps every day lead to big results.**
+
+**Python → NumPy → Pandas → Data Science → Machine Learning → AI** 🚀
