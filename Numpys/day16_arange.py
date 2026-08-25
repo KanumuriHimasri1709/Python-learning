@@ -12,3 +12,4 @@ print(arr1)
 #more examples
 print(np.arange(6))
 print(np.arange(3,9))
+print(np.arange(5,16,3))
