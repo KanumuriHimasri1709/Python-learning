@@ -2,3 +2,7 @@
 import numpy as np
 arr = np.linspace(2,10,5)
 print(arr)
+
+
+#Another example
+print(np.linspace(0,20,5))
