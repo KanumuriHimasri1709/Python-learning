@@ -7,3 +7,8 @@ print(arr)
 #another example
 arr1 = np.arange(10,21,2)
 print(arr1)
+
+
+#more examples
+print(np.arange(6))
+print(np.arange(3,9))
