@@ -2,9 +2,9 @@
 
 Welcome to my **NumPy Learning Repository**! 🚀
 
-This repository documents my **day-wise learning, coding practice, and hands-on experiments with NumPy**, one of the most important Python libraries for numerical computing, data analysis, and machine learning.
+This repository documents my **day-wise learning, coding practice, and hands-on experiments with NumPy**, one of the most important Python libraries for numerical computing, data analysis, scientific computing, and machine learning.
 
-I am learning NumPy step by step through practical coding and maintaining separate Python files for each topic.
+I am learning NumPy step by step through practical coding and maintaining separate Python files for each topic. This repository represents my continuous progress from **basic NumPy concepts to more advanced array operations**.
 
 ---
 
@@ -13,20 +13,26 @@ I am learning NumPy step by step through practical coding and maintaining separa
 My NumPy learning journey covers:
 
 * Array Creation
-* Array Properties
+* Array Size
+* Array Shape
+* Data Types
+* Number of Dimensions
 * Indexing
 * Slicing
 * Mathematical Operations
 * Aggregation Functions
 * 2D Arrays
+* 2D Indexing
+* 2D Slicing
 * Reshaping
 * Flattening
 * Transposing
 * Axes
-* Array Creation Utilities
+* Zeros, Ones and Full Arrays
 * Identity Matrices
 * Numerical Sequences
-* And more
+* `linspace()`
+* And more upcoming NumPy concepts
 
 This repository is part of my learning journey towards:
 
@@ -68,7 +74,8 @@ Python-learning/
 │   ├── day13_ones.py
 │   ├── day14_full.py
 │   ├── day15_eye.py
-│   └── day16_arange.py
+│   ├── day16_arange.py
+│   └── day17_linspace.py
 │
 └── README.md
 ```
@@ -94,7 +101,7 @@ Python-learning/
 * `np.array()`
 * `.size`
 
-### 🔹 Creating an Array
+### 🔹 Creating a NumPy Array
 
 ```python
 import numpy as np
@@ -280,8 +287,8 @@ print(numbers[-1])
 ### 🔹 Negative Indexing
 
 ```text
-Index:  -5  -4  -3  -2  -1
-Value:  10  20  30  40  50
+Index: -5  -4  -3  -2  -1
+Value: 10  20  30  40  50
 ```
 
 ### 🧠 Key Learning
@@ -1067,7 +1074,7 @@ np.ones()  → Array filled with 1
 
 ---
 
-# 📌 Day 14 – Creating Arrays with Full
+# 📌 Day 14 – Creating Arrays with `np.full()`
 
 ### 📁 File
 
@@ -1216,7 +1223,7 @@ Output:
 
 The main diagonal contains `1`s.
 
-All other positions contain `0`.
+All other positions contain `0`s.
 
 ### 🔹 Creating Different Identity Matrices
 
@@ -1295,9 +1302,7 @@ Creates an n × n matrix
 * Descending sequences
 * Difference between `range()` and `np.arange()`
 
----
-
-## 🔹 What is `np.arange()`?
+### 🔹 What is `np.arange()`?
 
 `np.arange()` is used to create a NumPy array containing a sequence of numbers within a specified range.
 
@@ -1315,9 +1320,7 @@ stop  → Ending value (excluded)
 step  → Difference between consecutive values
 ```
 
----
-
-## 🔹 Basic Example
+### 🔹 Basic Example
 
 ```python
 import numpy as np
@@ -1342,9 +1345,7 @@ stop  = 6
 
 The stop value `6` is **not included**.
 
----
-
-## 🔹 Using Start and Stop
+### 🔹 Using Start and Stop
 
 ```python
 numbers = np.arange(5, 11)
@@ -1358,11 +1359,7 @@ Output:
 [ 5  6  7  8  9 10]
 ```
 
----
-
-## 🔹 Using Step
-
-The `step` parameter controls the difference between consecutive numbers.
+### 🔹 Using Step
 
 ```python
 numbers = np.arange(1, 11, 2)
@@ -1376,19 +1373,7 @@ Output:
 [1 3 5 7 9]
 ```
 
-Here:
-
-```text
-start = 1
-stop  = 11
-step  = 2
-```
-
----
-
-## 🔹 Using Negative Step
-
-`np.arange()` can also generate numbers in descending order.
+### 🔹 Using Negative Step
 
 ```python
 numbers = np.arange(10, 0, -2)
@@ -1402,9 +1387,7 @@ Output:
 [10  8  6  4  2]
 ```
 
----
-
-## 🔹 Creating Even Numbers
+### 🔹 Creating Even Numbers
 
 ```python
 even_numbers = np.arange(2, 11, 2)
@@ -1418,9 +1401,7 @@ Output:
 [ 2  4  6  8 10]
 ```
 
----
-
-## 🔹 Creating Odd Numbers
+### 🔹 Creating Odd Numbers
 
 ```python
 odd_numbers = np.arange(1, 10, 2)
@@ -1434,11 +1415,9 @@ Output:
 [1 3 5 7 9]
 ```
 
----
+### 🔹 `np.arange()` vs Python `range()`
 
-## 🔹 `np.arange()` vs Python `range()`
-
-### Python `range()`
+Python `range()`:
 
 ```python
 numbers = range(1, 6)
@@ -1448,7 +1427,7 @@ print(numbers)
 
 `range()` creates a Python range object.
 
-### NumPy `arange()`
+NumPy `arange()`:
 
 ```python
 numbers = np.arange(1, 6)
@@ -1476,29 +1455,17 @@ np.arange()
 NumPy array
 ```
 
----
-
-## 🔹 Important Rule
-
-The **stop value is excluded**.
-
-For example:
-
-```python
-np.arange(1, 6)
-```
-
-produces:
+### 🧠 Key Learning
 
 ```text
-[1 2 3 4 5]
+np.arange(start, stop, step)
+
+start → Included
+stop  → Excluded
+step  → Difference between values
 ```
 
-It does not include `6`.
-
----
-
-## 🔹 Real-World Example
+### 🔥 Real-World Example
 
 Suppose we want to create product IDs from `100` to `109`:
 
@@ -1514,34 +1481,6 @@ Output:
 [100 101 102 103 104 105 106 107 108 109]
 ```
 
-This can be useful when creating numerical sequences for data analysis and machine learning.
-
----
-
-## 🧠 Key Learning
-
-```text
-np.arange(start, stop, step)
-
-start → Included
-stop  → Excluded
-step  → Difference between values
-```
-
-### 🔥 Easy Way to Remember
-
-```text
-np.arange()
-     ↓
-Creates numbers
-     ↓
-Within a range
-     ↓
-With a specified step
-     ↓
-Returns a NumPy array
-```
-
 ### ✅ Skills Practiced
 
 * Creating numerical sequences
@@ -1552,6 +1491,156 @@ Returns a NumPy array
 * Creating descending sequences
 * Understanding `range()` vs `np.arange()`
 * Working with NumPy arrays
+
+---
+
+# 📌 Day 17 – NumPy `linspace()`
+
+### 📁 File
+
+* `day17_linspace.py`
+
+### 📖 Topics Covered
+
+* `np.linspace()`
+* Creating evenly spaced numbers
+* Start value
+* Stop value
+* Number of samples
+* Difference between `arange()` and `linspace()`
+
+### 🔹 What is `np.linspace()`?
+
+`np.linspace()` is used to create a NumPy array containing a specified number of **evenly spaced values** between a start and stop value.
+
+### 🔹 Syntax
+
+```python
+np.linspace(start, stop, num)
+```
+
+Where:
+
+```text
+start → Starting value
+stop  → Ending value
+num   → Number of values to generate
+```
+
+By default, the stop value is included.
+
+### 🔹 Basic Example
+
+```python
+import numpy as np
+
+numbers = np.linspace(1, 10, 5)
+
+print(numbers)
+```
+
+Output:
+
+```text
+[ 1.    3.25  5.5   7.75 10.  ]
+```
+
+Here:
+
+```text
+start = 1
+stop  = 10
+num   = 5
+```
+
+So NumPy generates **5 evenly spaced values** between `1` and `10`.
+
+### 🔹 Creating Evenly Spaced Values
+
+```python
+numbers = np.linspace(0, 1, 6)
+
+print(numbers)
+```
+
+Output:
+
+```text
+[0.  0.2 0.4 0.6 0.8 1. ]
+```
+
+### 🔹 `arange()` vs `linspace()`
+
+`np.arange()` focuses on the **step size**:
+
+```python
+np.arange(0, 10, 2)
+```
+
+Output:
+
+```text
+[0 2 4 6 8]
+```
+
+`np.linspace()` focuses on the **number of values**:
+
+```python
+np.linspace(0, 10, 5)
+```
+
+Output:
+
+```text
+[ 0.   2.5  5.   7.5 10. ]
+```
+
+### 🧠 Easy Difference
+
+```text
+np.arange()
+     ↓
+Specify STEP
+     ↓
+Creates values based on step size
+
+
+np.linspace()
+     ↓
+Specify NUMBER OF VALUES
+     ↓
+Creates evenly spaced values
+```
+
+### 🔥 Why `linspace()` Is Useful
+
+`np.linspace()` is commonly used in:
+
+* Data Visualization
+* Mathematical Calculations
+* Scientific Computing
+* Machine Learning
+* Plotting Functions
+* Numerical Analysis
+
+### 🧠 Key Learning
+
+```text
+np.linspace(start, stop, num)
+
+start → Starting value
+stop  → Ending value
+num   → Number of values
+```
+
+### ✅ Skills Practiced
+
+* Creating evenly spaced sequences
+* Using `np.linspace()`
+* Understanding the `num` parameter
+* Comparing `linspace()` with `arange()`
+* Working with numerical data
+* Generating values for mathematical and visualization tasks
 
 ---
 
@@ -1577,6 +1666,7 @@ Returns a NumPy array
 | Day 14 | Full                  | ✅ Completed |
 | Day 15 | Eye / Identity Matrix | ✅ Completed |
 | Day 16 | `arange()`            | ✅ Completed |
+| Day 17 | `linspace()`          | ✅ Completed |
 
 ---
 
@@ -1590,9 +1680,11 @@ Through this learning journey, I have practiced:
 * Array Data Types
 * Number of Dimensions
 * 1D Indexing
+* Positive Indexing
 * Negative Indexing
 * 1D Slicing
 * Step Slicing
+* Reverse Slicing
 * NumPy Arithmetic Operations
 * Element-wise Operations
 * Aggregation Functions
@@ -1612,7 +1704,9 @@ Through this learning journey, I have practiced:
 * Using `np.eye()`
 * Creating Numerical Sequences
 * Using `np.arange()`
+* Using `np.linspace()`
 * Understanding `range()` vs `np.arange()`
+* Understanding `arange()` vs `linspace()`
 * Basic Matrix Concepts
 
 ---
@@ -1657,6 +1751,8 @@ Full
 Eye / Identity Matrix
       ↓
 arange()
+      ↓
+linspace()
 ```
 
 ---
@@ -1681,6 +1777,8 @@ Instead of only studying theoretical concepts, I maintain individual Python file
 * Practice through code
 * Experiment with different examples
 * Track my learning progress
+* Improve my Python programming skills
+* Build a strong foundation for Data Science
 * Maintain my work professionally on GitHub
 
 This NumPy foundation will help me progress towards:
@@ -1705,7 +1803,7 @@ Artificial Intelligence
 
 # 👩‍💻 About Me
 
-**Kanumuri Hima Sri**
+### **Kanumuri Hima Sri**
 
 **B.Tech – Artificial Intelligence & Data Science**
 
@@ -1730,6 +1828,8 @@ Practice
   ↓
 Write Code
   ↓
+Test
+  ↓
 Commit
   ↓
 Push to GitHub
@@ -1737,24 +1837,15 @@ Push to GitHub
 Improve
 ```
 
-This repository represents my **continuous learning, coding practice, and technical growth**.
+This repository represents my **continuous learning, coding practice, consistency, and technical growth**.
 
 ---
 
-# ⭐ Repository
+# 🚀 Next Steps
 
-**Learning → Practicing → Building → Improving**
-
-If you find this repository useful, consider giving it a ⭐ **Star!**
-
----
-
-# 🚀 Next Step
-
-After completing `day16_arange.py`, my next NumPy practice will continue with:
+After completing the first 17 days of NumPy practice, I plan to continue learning more important NumPy concepts:
 
 ```text
-Day 17 → linspace()
 Day 18 → ravel()
 Day 19 → Copy vs View
 Day 20 → Array Iteration
@@ -1772,8 +1863,34 @@ Day 30 → Matrix Operations
 
 ---
 
-## 🌱 Learning Journey
+# 🌱 Learning Journey
 
 > **Small steps every day lead to big results.**
 
-**Python → NumPy → Pandas → Data Science → Machine Learning → AI** 🚀
+```text
+Python
+   ↓
+NumPy
+   ↓
+Pandas
+   ↓
+Data Visualization
+   ↓
+Data Science
+   ↓
+Machine Learning
+   ↓
+Artificial Intelligence
+```
+
+---
+
+# ⭐ Repository
+
+**Learning → Practicing → Building → Improving**
+
+If you find this repository useful, consider giving it a ⭐ **Star!**
+
+---
+
+**Made with 🐍 Python, NumPy & consistent learning 🚀**
