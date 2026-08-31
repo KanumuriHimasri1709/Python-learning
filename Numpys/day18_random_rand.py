@@ -4,3 +4,6 @@ arr = np.random.rand(5)
 print(arr)
 
 print(np.random.rand(7))
+
+
+print(np.random.rand(2,3))
