@@ -2,3 +2,5 @@
 import numpy as np
 arr = np.random.rand(5)
 print(arr)
+
+print(np.random.rand(7))
